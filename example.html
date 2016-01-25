@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Ejemplo formulario AI</title>
+        <meta name="description" content="Formulario">
+        <link rel="stylesheet" type="text/css" href="css/style-form.css">
+    </head>
+    
+    <body>
+        <div class="content-form clearfix">
+
+            <div class="example"> <!-- DIV ADDED FOR THE EXAMPLE -->
+
+                <p>Los campos marcados con * son obligatorios.</p>
+
+                <form action="" method="">
+
+                    <div class="content-colaborar clearfix">
+
+                        <h2>Encabezado H2</h2>
+
+                        <fieldset class="fila-1 clearfix">
+                            <div class="fieldset-wrapper">
+                                <div class="border-radius-form shadow capa-select">
+                                    <select class="input-generic select" name="selecttime" form="selecttime">
+                                        <option value="time-month">Opcion 1</option>
+                                        <option value="time-year">Opcion 2</option>
+                                    </select>
+                                </div>
+
+                                <div class="caja-checkbox">
+                                    <div>
+                                        <div><input type="radio" name="cuota" value="1" checked /><label>1</label></div>
+                                        <div><input type="radio" name="cuota" value="2" /><label>2</label></div>
+                                        <div><input type="radio" name="cuota" value="3" /><label>3</label></div>
+                                        <div><input type="radio" name="cuota" value="otra" /><label>otro</label></div>
+                                    </div>
+                                </div>
+
+                                <div class="capa-other-quant">
+                                    <input class="border-radius-form input-generic other-quant" id="other-quant" type="text" maxlength="4" size="1" value="" />
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div><!--/colaborar-->
+
+                    <div class="content-datos active padding-medium">
+
+                        <h2>Encabezado H2 en bloque activo</h2>
+
+                        <fieldset class="fila-1">
+                            <div class="margin-medium">
+                                <input class="border-radius-form input-generic" type="text" name="name" id="name" placeholder="01" maxlength="20">
+                            </div>
+                            <div class="margin-medium">
+                                <input class="border-radius-form input-generic" type="text" name="first-surname" id="02" placeholder="Input 2">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fila-2">
+                            <div class="margin-medium">
+                                <div class="border-radius-form shadow capa-select">
+                                    <select class="input-generic select" name="genero" form="genero">
+                                        <option value="" selected="selected">Select</option>
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                        <option value="3">C</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fila-3">
+                            <div class="margin-medium">
+                                <input class="border-radius-form input-generic" type="email" name="email" id="03" placeholder="Input 3" maxlength="20">
+                            </div>
+                            <div class="margin-medium">
+                                <div class="border-radius-form shadow capa-select">
+                                    <select class="input-generic profesion select" name="provincia" form="provincia">
+                                        <option value="x">X</option>
+                                        <option value="y">Y</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </div><!--/datos-->
+
+                    <div class="form-actions">
+                        <input class="webform-submit button-primary form-submit" name="op" value="Enviar" type="submit">
+                    </div>
+                    
+                </form>
+
+            </div><!-- /EXAMPLE -->
+
+        </div>
+
+    </body>
+</html>
