@@ -1,6 +1,8 @@
-# Diseño de Formularios de Amnistía Internacional Sección Española 
+# Diseño de formularios web de Amnistía Internacional Sección Española 
 
 Estilos generales para los formularios web de Amnistía Internacional Sección Española y diseños específicos para algunos de ellos.
+
+Para más información e instrucciones, consultar la Wiki: https://github.com/amnesty/ai-formulario/wiki
 
 ## Licence
 
