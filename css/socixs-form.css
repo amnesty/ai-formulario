@@ -5,6 +5,7 @@
     font-size: 18px;
     color: #000;
     margin-bottom: 20px;
+    padding: 0px 20px;
 
 }
 .text-intro span{
@@ -26,6 +27,7 @@
 .box-form-es p{
     font-size: 13px;
     color: #000000;
+    padding: 0px 20px;
 }
 
 .box-form-es .input-generic {
@@ -371,6 +373,7 @@
 }
 
 /* content-end-form ----------------------------------------------------- */
+
 .content-end-form input[type=checkbox] {
     visibility: hidden;
     height: 28px;
@@ -387,7 +390,6 @@
 }
 
 .content-end-form .check-politica label {
-
     color: #fff;
 }
 
@@ -422,7 +424,12 @@
 }
 
 .content-end-form .botons-form{
-    margin-top: 40px;
+    margin-top: 0px;
+}
+
+.content-end-form {
+    padding: 0px;
+    margin: -60px 0px 50px 0px;
 }
 
 /* H */
@@ -437,7 +444,7 @@
     clear: both;
     background: #f1e60d;
     border: 0;
-    margin-top: -110px;
+    margin-top: -120px;
     margin-left: 71%;
 
 }
@@ -446,6 +453,10 @@
     max-width: 158px;
     width: 100%;
     float: left;
+}
+
+.box-form-es .form-actions {
+    margin: -40px 0px 0px 0px;
 }
 
 /* Box Right ----------------------------------------------------- */
@@ -497,6 +508,7 @@
 
     .content-form{
         max-width:960px;
+        margin: auto;
     }
 
     .box-form-es {
@@ -551,6 +563,7 @@
 
     .content-form{
         max-width:768px;
+        margin: auto;
     }
 
     .box-form-es span{
@@ -644,6 +657,7 @@
 
     .content-form{
         max-width:500px;
+        margin: auto;
     }
 
     .content-datos .fila-1 input, .content-datos .fila-3 input {
@@ -739,17 +753,19 @@
         float: none;
         margin: 20px auto auto;
         display: block;
+        top: -30px;
+        margin-bottom: 150px;
     }
 
     .box-form-es form .button-primary{
         float: left;
-        margin-left: 0;
+        margin-left: 16.7%;
         margin-top: -180px;
     }
 }
 
-/* max-width: 767px */
-@media only screen and (max-width: 767px) {
+/* max-width: 587px */
+@media only screen and (max-width: 587px) {
 
     .content-colaborar .capa-selecttime {
         width: 100%;
@@ -771,6 +787,7 @@
 
     .content-form{
         max-width:320px;
+        margin: auto;
     }
 
     .box-form-es span {
@@ -843,6 +860,20 @@
 
     .content-cuenta select.iban-letras {
         background-position: 76% center;
+    }
+
+    .content-end-form .botons-form img {
+        float: none;
+        margin: 20px auto auto;
+        display: block;
+        top: -30px;
+        margin-bottom: 150px;
+    }
+
+    .box-form-es form .button-primary{
+        float: left;
+        margin-left: 0;
+        margin-top: -180px;
     }
 
 }
