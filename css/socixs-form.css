@@ -45,7 +45,7 @@
         width: 100%;
     }
 
-    .webform-conditional-processed  .content-colaborar, .webform-conditional-processed .content-datos, 
+    .webform-conditional-processed  .content-colaborar, .webform-conditional-processed .content-datos,
     .webform-conditional-processed .content-direccion, .webform-conditional-processed .content-cuenta {
         padding: 0px 20px 20px;
     }
@@ -103,7 +103,7 @@
     }
 
     .webform-conditional-processed .content-colaborar .cuotas {
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         font-size: 24px;
         line-height: 50px;
         float:left;
@@ -179,7 +179,7 @@
     }
 
     .webform-conditional-processed .content-datos select.document {
-        background-position: 110px center;
+        background-position: 90px center;
     }
 
     .webform-conditional-processed .content-datos .number-dni,
@@ -283,10 +283,9 @@
         background-position: 65px center;
         /* como input-generic */
         border: 0;
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         font-size: 24px;
         color: #000;
-        line-height: 50px;
         height: 50px;
         position: relative;
         float: left;
@@ -664,7 +663,7 @@
     border-top: 0px;
 }
 
-#share-buttons .ai-accion-firma-compartir__facebook,  
+#share-buttons .ai-accion-firma-compartir__facebook,
 #share-buttons .ai-accion-firma-compartir__twitter {
     width: 45%;
     margin: 0px;
@@ -768,6 +767,10 @@
         float: none;
         margin-left: 0px;
         margin-top: -0px;
+    }
+
+    .webform-conditional-processed .content-cuenta .ncuenta{
+        margin-top:20px;
     }
 
 }
@@ -894,7 +897,7 @@
         margin-left: 0px;
         margin-top: -0px;
     }
-    
+
     .preview .content-cuenta {
         float: none;
         margin-left: 0px;

@@ -195,6 +195,14 @@ jQuery(function($) {
         $('a.popup_little').resize({ width:"50%", height:y });
     }
 
+    // 0 del DNI
+    $('.number-dni').first().focusout(function(){
+        var dni = String($(this).val());
+        if(dni.substring(0,1)=='0'){
+            $(this).val(dni.substring(1));
+        }
+    });
+
     // Redes sociales
 
     function share(title, summary, url, image) {
