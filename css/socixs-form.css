@@ -1,13 +1,4 @@
-/* CSS específico del formulario de socixs ------------------- */
-    @font-face {
-      font-family: 'TradeGothic-BoldCondTwenty';
-      src: url('../font/TradeGothic-BoldCondTwenty.eot?#iefix') format('embedded-opentype'),
-      url('../font/TradeGothic-BoldCondTwenty.woff') format('woff'),
-      url('../font/TradeGothic-BoldCondTwenty.ttf')  format('truetype'),
-      url('../font/TradeGothic-BoldCondTwenty.svg#TradeGothic-BoldCondTwenty') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
+-/* CSS específico del formulario de socixs ------------------- */
 
     .text-intro{
         font-family: Verdana, Geneva, sans-serif;
@@ -18,7 +9,7 @@
     }
 
     .text-intro span{
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     }
 
     .box-form-es{
@@ -37,7 +28,7 @@
         font-size: 20px;
         color: #000000;
         padding: 0px 20px;
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         text-align: justify;
     }
 
@@ -155,7 +146,7 @@
     }
 
     .webform-conditional-processed .content-datos a{
-    	font-family: 'TradeGothic-BoldCondTwenty';
+    	font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     	float: left;
         font-size: 20px;
         color: #000;
@@ -233,7 +224,7 @@
 
 
     .webform-conditional-processed .content-datos .fila-3 label {
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         float: left;
         font-size: 20px;
         color: #000;
@@ -352,7 +343,7 @@
 
     /* content-cuenta ----------------------------------------------------- */
     .webform-conditional-processed .content-cuenta label.iban{
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         float: left;
         font-size: 20px;
         color: #000;
@@ -461,10 +452,10 @@
         -webkit-appearance: none;
     }
 
-    /* boton enviar */
+    /* boton enviar y siguiente */
     .box-form-es .button-primary,
-    .box-form-es .form-submit {
-        font-family: 'TradeGothic-BoldCondTwenty';
+    .box-form-es .webform-next {
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         max-width: 315px;
         width: 100%;
         height: 100px;
@@ -476,6 +467,24 @@
         border: 0;
         margin-top: -130px;
         margin-left: 71%;
+        /*line-height: 100px;*/
+    }
+
+    /* boton previo */
+    .box-form-es .webform-previous {
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
+        max-width: 315px;
+        width: 100%;
+        height: 100px;
+        font-size: 46px;
+        text-align: center;
+        float: left;
+        clear: both;
+        background: #fff;
+        border: 2px #000 solid;
+        margin-top: -130px;
+        margin-left: 21%;
+        /*line-height: 100px;*/
     }
 
     /* caja botones y politica */
@@ -523,7 +532,7 @@
     }
 
     .box-es-right .three-column h3{
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         font-size: 32px;
         line-height: 36px;
         text-align: center;
@@ -554,7 +563,7 @@
 
 .preview {
     margin: 0px 20px;
-    font-family: 'TradeGothic-BoldCondTwenty';
+    font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     font-size: 20px;
 }
 
@@ -567,7 +576,7 @@
 }
 
 .preview h2{
-    font-family: 'TradeGothic-BoldCondTwenty';
+    font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     font-size: 35px;
     border-bottom: 2px solid #000;
     padding-bottom: 10px;
@@ -599,7 +608,7 @@
 
 /* boton enviar */
 .preview .form-submit {
-    font-family: 'TradeGothic-BoldCondTwenty';
+    font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     /*width: 100%;*/
     height: 70px;
     font-size: 30px;
@@ -711,7 +720,7 @@
     }
 
     .webform-conditional-processed .content-datos select.document {
-        background-position: 110px center;
+        background-position: 90px center;
     }
 
     .webform-conditional-processed .content-datos .fila-3 label {
@@ -769,12 +778,16 @@
         margin-top: -0px;
     }
 
+}
+
+/* max-width: 986px */
+@media only screen and (max-width: 1200px) {
+
     .webform-conditional-processed .content-cuenta .ncuenta{
-        margin-top:20px;
+        /*margin-top:20px;*/
     }
 
 }
-
 /* max-width: 986px */
 @media only screen and (max-width: 986px) {
 
@@ -1269,7 +1282,7 @@
 
     /* boton enviar */
     .preview .form-submit {
-        font-family: 'TradeGothic-BoldCondTwenty';
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         /*width: 100%;*/
         height: 70px;
         font-size: 30px;
@@ -1313,5 +1326,33 @@
         float: none;
         margin-left: 0px;
         margin-top: -0px;
+    }
+
+    .webform-conditional-processed .content-cuenta .capa-iban-letras {
+        margin-bottom: 20px;
+    }
+
+    .webform-conditional-processed .content-end-form .politica {
+        float: left;
+        width: 200px;
+    }
+
+    .content-form fieldset {
+        margin-top: 20px;
+    }
+
+    .webform-conditional-processed .content-colaborar .cuotas div {
+        float: none;
+        margin: 0;
+    }
+
+    .webform-conditional-processed .content-colaborar .capa-other-quant {
+        float: none;
+        margin: auto;
+    }
+
+    .webform-conditional-processed .content-colaborar .cuotas {
+        float: none;
+        text-align: center;
     }
 }
