@@ -2,7 +2,8 @@
 /* ------------- Diseño general para formularios ---------------- */
 /* -------------------------------------------------------------- */
 
-/* Fuentes */
+/* Fuentes ----------- */
+
 @font-face {
       font-family: 'TradeGothic-BoldCondTwenty';
       src: url('../font/TradeGothic-BoldCondTwenty.eot?#iefix') format('embedded-opentype'),
@@ -52,9 +53,6 @@ header, hgroup, nav, section {
     width: 100%;
     margin: auto;
     margin-bottom: 30px;
-}
-
-.content-form {
     font-size: 62.5%;
     word-wrap:break-word;
     color: #000000;
@@ -67,7 +65,8 @@ header, hgroup, nav, section {
     box-sizing: border-box;
 }
 .content-form .caja-content {
-  padding: 5px 20px 20px;
+    padding: 5px 20px 20px;
+    margin: 10px 0px;
 }
 
 .clearfix:after{
@@ -128,17 +127,10 @@ header, hgroup, nav, section {
     border-radius: 0;
 }
 
-.content-form .webform-conditional-processed select{
-    width: 104%;
-    background: #fff url(../images/arrow.png);
-    background-repeat: no-repeat;
-    cursor: default;
-}
-
 .content-form .webform-conditional-processed .input-generic{
     border: 2px solid #000;
     font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
-    width: 100%;
+    /*width: 100%;*/
     font-size: 21px;
     color: #000000;
     height: 50px;
@@ -149,7 +141,7 @@ header, hgroup, nav, section {
     padding-left: 10px;
 }
 
-/* Caja con checkbox */
+/* Caja con checkbox --------- */
 .content-form .webform-conditional-processed .caja-checkbox {
     font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     font-size: 24px;
@@ -164,8 +156,9 @@ header, hgroup, nav, section {
     margin-right: 10px;
 }
 
-/* Selects */
+/* Selects --------- */
 .content-form .webform-conditional-processed .capa-select{
+    min-width: 150px;
     overflow: hidden;
     float: left;
     border: 2px solid #000;
@@ -174,31 +167,23 @@ header, hgroup, nav, section {
 }
 
 .content-form .webform-conditional-processed .select{
-    width: 120%;
+    width: 110%;
+    border: 0;
+}
+
+.content-form .webform-conditional-processed select{
+    /*width: 104%;*/
+    background: #fff url(../images/arrow.png);
+    background-repeat: no-repeat;
+    cursor: default;
     border: 0;
 }
 
 .content-form .webform-conditional-processed select.select {
-    background-position: 220px center;
+    background-position: 115px center;
 }
 
-/* Boton enviar */
-.form-submit{
-  font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
-  max-width: 315px;
-  width: 100%;
-  height: 100px;
-  font-size: 46px;
-  background: #f1e60d;
-  border: 0;
-  /*color: #000;*/
-}
-
-.form-submit:hover{
-  background: #f1e60d;
-}
-
-/* Elementos de desplegable de fecha */
+/* Elementos de desplegable de fecha ----------- */
 .content-form .webform-conditional-processed .caja-content .capa-fechas div div {
     width: 95px;
     overflow: hidden;
@@ -233,7 +218,6 @@ header, hgroup, nav, section {
 }
 
 /* Bordes y sombras ------------------- */
-
 .content-form .webform-conditional-processed .border-radius-form{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -246,7 +230,25 @@ header, hgroup, nav, section {
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.63);
 }
 
+/* Boton enviar -------------- */
+.form-submit, .webform-submit,
+.form-actions input[type="submit"]{
+  font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
+  max-width: 315px;
+  width: 100%;
+  height: 100px;
+  font-size: 46px;
+  background: #f1e60d;
+  border: 0;
+  /*color: #000;*/
+}
+
+.form-submit:hover{
+  background: #f1e60d;
+}
+
 /* Errores ---------------------- */
+
 div.error {
     font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     background: #fee;
@@ -255,25 +257,6 @@ div.error {
 }
 
 .form-item input.error, .form-item select.error,
-input.error, select.error,
-/*div.error*/ {
+input.error, select.error, /*div.error*/ {
     border: 2px #f00 solid;
-}
-
-/* Estilos específicos para el ejemplo ------------------------ */
-
-/* Hay que dar medida a las cajas, puede ser genérica como aquí o para cada uno de los elementos */
-.example .caja-content .margin-medium,
-.example .caja-content .capa-select {
-    width: 250px;
-}
-
-/* caso concreto para la caja contenedora de desplegables de fecha */
-.example .capa-fechas div{
-    width: 350px;
-}
-
-/* margen de los elementos por defecto */
-.example .caja-content{
-    margin: 10px 0px;
 }
