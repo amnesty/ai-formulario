@@ -70,11 +70,11 @@ jQuery(function($) {
     if( $(".webform-client-form").first().hasClass("preview") ){
         // título confirma tus datos
         if(url.indexOf("/cat") > -1){
-          $(".text-intro").append("<h4 style='margin-top: 40px; margin-bottom: -50px;'>¿Ens ajudes a confirmar que les teves dades són correctes?</h4>");
+          $(".box-form-es").prepend("<h4 style='margin-top: 10px; margin-bottom: 20px; margin-left: 20px;'>¿Ens ajudes a confirmar que les teves dades són correctes?</h4>");
           $(".content-colaborar").prepend("<h2 style='margin-top: 15px; margin-bottom: 15px;'>Dades personals</h2>");
           $(".content-cuenta").prepend("<h2 style='margin-top: 15px; margin-bottom: 15px;'>Mètode de pagament</h2>");
         }else {
-          $(".text-intro").append("<h4 style='margin-top: 40px; margin-bottom: -50px;'>¿Nos ayudas a confirmar que tus datos son correctos?</h4>");
+          $(".box-form-es").prepend("<h4 style='margin-top: 10px; margin-bottom: 20px; margin-left: 20px;'>¿Nos ayudas a confirmar que tus datos son correctos?</h4>");
           $(".content-colaborar").prepend("<h2 style='margin-top: 15px; margin-bottom: 15px;'>Datos personales</h2>");
           $(".content-cuenta").prepend("<h2 style='margin-top: 15px; margin-bottom: 15px;'>Forma de pago</h2>");
         }
@@ -146,43 +146,83 @@ jQuery(function($) {
         $(".caja-content").removeClass('active');
     }
 
-  // Make the IBAN fields to automatically move the cursor through when any field is fullfilled.
+    // Cut option values in Profesion
 
-  $(".country").keyup( function(){
-    if($(".country").val().length >= 2){
-        $(".entity").focus();
-    }
-  });
+    // first time
+    $(".profesion option:selected").text(
+      function(i,t){
+          return t.length > ($(".profesion").width()/11) ? t.substr(0,25) + "..." : t;
+      }
+    );
+    // When it changes
+    $( ".profesion" ).change(function() {
+      $(".profesion option:selected").text(
+        function(i,t){
+            return t.length > ($(".profesion").width()/11) ? t.substr(0,25) + "..." : t;
+        }
+      );
+    });
 
-  $(".entity").keyup( function(){
-    if($(".entity").val().length >= 4){
-        $(".office").focus();
-    }
-  });
+    // Sort the countries
+    $( document ).ready(function() {
+      var options = $('.pais option');
+      var selected = $('.pais option:selected').val();
+      var arr = options.map(function(_, o) { return { t: $(o).text(), v: o.value }; }).get();
+      arr.sort(function(o1, o2) { return o1.t > o2.t ? 1 : o1.t < o2.t ? -1 : 0; });
+      options.each(function(i, o) {
+        o.value = arr[i].v;
+        $(o).text(arr[i].t);
+      });
+      $(".pais").val(selected);
+    });
 
-  $(".office").keyup( function(){
-    if($(".office").val().length >= 4){
-        $(".check").focus();
-    }
-  });
+    // Province label
+    $('.provincia option[value=""]').text("-Provincia-");
 
-  $(".check").keyup( function(){
-    if($(".check").val().length >= 2){
-        $(".account").focus();
+    // Etiquetas de fecha de nacimiento
+    if(url.indexOf("/cat") > -1){ // AmnistiaCAT
+      $('.day option[value=""]').text("Dia");
+      $('.month option[value=""]').text("Mes");
+      $('.year option[value=""]').text("Any");
     }
-  });
 
-  // Mark errors in select boxes
+    // Make the IBAN fields to automatically move the cursor through when any field is fullfilled.
 
-  $(".error").not(".messages").each( function(){
-    if ($(this).is("select")){
-        $(this).parent().addClass("form-error");
-        $(this).parent().css("border", "#f00 2px solid");
-    }
-    else {
-        $(this).css("border", "#f00 2px solid");
-    }
-  });
+    $(".country").keyup( function(){
+      if($(".country").val().length >= 2){
+          $(".entity").focus();
+      }
+    });
+
+    $(".entity").keyup( function(){
+      if($(".entity").val().length >= 4){
+          $(".office").focus();
+      }
+    });
+
+    $(".office").keyup( function(){
+      if($(".office").val().length >= 4){
+          $(".check").focus();
+      }
+    });
+
+    $(".check").keyup( function(){
+      if($(".check").val().length >= 2){
+          $(".account").focus();
+      }
+    });
+
+    // Mark errors in select boxes
+
+    $(".error").not(".messages").each( function(){
+      if ($(this).is("select")){
+          $(this).parent().addClass("form-error");
+          $(this).parent().css("border", "#f00 2px solid");
+      }
+      else {
+          $(this).css("border", "#f00 2px solid");
+      }
+    });
 
     // Show or hide/erase "other quantity" field depending on which checkbox is checked
     $(".cuota").click(function() {
@@ -227,10 +267,10 @@ jQuery(function($) {
     }
     $(".ai-accion-firma-compartir__facebook").each(function() {
         var n = $(this),
-            i = urlActualFB, //n.data("ai-share-url")
-            a = n.data("ai-share-title") || tituloActualFB,
-            s = n.data("ai-share-summary-html"),
-            l = n.data("ai-share-image") || "";
+            i = n.data("ai-share-url") || urlActualFB,
+            a = n.data("ai-share-title") || tituloActual,
+            s = n.data("ai-share-summary-html") || resumen,
+            l = n.data("ai-share-image") || imagen;
         n.click(function() {
             return share(a, s, i, l), !1
         });
@@ -242,8 +282,8 @@ jQuery(function($) {
     $(".ai-accion-firma-compartir__twitter").each(function() {
         var n = $(this),
             r = n.data("ai-share-url") || urlActualTW,
-            o = n.data("ai-share-summary-html"),
-            v = n.data("ai-share-via");
+            o = n.data("ai-share-summary-html") || tituloActual,
+            v = n.data("ai-share-via") || compartirViaTW;
             n.click(function() {
                 return tw(o, r, v), !1
             });

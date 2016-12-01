@@ -2,34 +2,46 @@
 
     .content-form .text-intro {
         font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
-        font-size: 18px;
+        font-size: 19px;
         color: #000000;
         margin-bottom: 20px;
         padding: 0px 20px;
     }
 
-    .box-form-es{
+    .box-form-es {
     	width: 75%;
     	float: left;
     }
 
-    .box-form-es img{
+    .box-form-es img {
         display: inline-block;
         top: 10px;
         position: relative;
         margin-left: 10px;
     }
 
-    .box-form-es p{
+    .box-form-es p {
+        font-size: 15px;
+        color: #000000;
+        padding: 0px 20px;
+        font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
+        text-align: justify;
+        font-style: italic;
+    }
+
+    /* Gracias */
+    .box-form-es .field p {
         font-size: 20px;
         color: #000000;
         padding: 0px 20px;
         font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         text-align: justify;
+        font-style: normal;
     }
 
-    .box-form-es .webform-conditional-processed .input-generic {
+    .webform-conditional-processed .input-generic {
         width: 100%;
+        max-width: 350px; /* H: ancho maximo de los campos */
     }
 
     .webform-conditional-processed .content-colaborar,
@@ -51,6 +63,32 @@
     /* Esconder mensajes de info / estado */
     .status {
         visibility: hidden;
+    }
+
+    /* HEADERS ---------------------------------------------------------------*/
+    .responsive--bg-b {
+        background-position: center 59%;
+        background-size: cover;
+    }
+
+    .responsive--bg-c {
+        background-position: center 50%;
+        background-size: cover;
+    }
+
+    .responsive--bg-d {
+        background-position: center 36%;
+        background-size: cover;
+    }
+
+    .responsive--bg-don {
+        background-position: center 33%;
+        background-size: cover;
+    }
+
+    .responsive--bg-nav {
+        background-position: center 30%;
+        background-size: cover;
     }
 
 
@@ -92,9 +130,9 @@
         background-position: 260px center;
     }
 
-    /*.content-colaborar .cuotas label {
-        margin-right: 10px;
-    }*/
+    .webform-conditional-processed .content-colaborar .cuotas {
+        float: left;
+    }
 
     .webform-conditional-processed .content-colaborar .capa-other-quant {
         width: 70px;
@@ -111,7 +149,6 @@
         width: 100%;
     }
 
-
     /* content-datos ----------------------------------------------------- */
 
     .webform-conditional-processed .content-datos .fila-1,
@@ -120,27 +157,32 @@
         margin-top: 20px;
     }
 
-    .webform-conditional-processed .content-datos .margin-negativo{
+    .webform-conditional-processed .content-datos .info-nif {
          margin-left: -32px;
     }
 
     .webform-conditional-processed .content-datos .fila-1 input,
     .webform-conditional-processed .content-datos .fila-3 input {
-        max-width: 227px;
+        max-width: 210px;
     }
 
     .webform-conditional-processed .content-datos a{
     	  font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     	  float: left;
-        font-size: 20px;
+        font-size: 18px;
         color: #000;
         height: 44px;
         line-height: 50px;
-        margin-right: 10px;
+        /*margin-right: 10px;*/
+    }
+
+    .webform-conditional-processed .content-datos .capa-fechas label{
+        margin-left: 70px;
     }
 
     .webform-conditional-processed .content-datos .capa-document{
         max-width: 135px;
+        width: 130px;
         border-radius: 10px 0 0 10px;
         overflow: hidden;
         float: left;
@@ -148,18 +190,30 @@
     }
 
     .webform-conditional-processed .content-datos .document{
-    	width: 125%;
+    	  width: 125%;
         z-index: 9;
         border-radius: 10px 0 0 10px;
     }
 
     .webform-conditional-processed .content-datos select.document {
-        background-position: 90px center;
+        background-position: 100px center;
     }
 
-    .webform-conditional-processed .content-datos .number-dni,
+    .webform-conditional-processed .content-datos .fila-1 .number-dni{
+      max-width: 151px;
+    }
+
+    .webform-conditional-processed .content-datos .fila-1 .nombre{
+       max-width: 605px;
+       width: 210px;
+    }
+
+    .webform-conditional-processed .content-datos .email{
+       max-width: 350px;
+    }
+
     .webform-conditional-processed .content-datos .mobile{
-    	max-width: 175px; /* 162 */
+    	max-width: 225px;
     }
 
     .webform-conditional-processed .content-datos .number-dni{
@@ -212,7 +266,7 @@
     }
 
     .webform-conditional-processed .content-datos .capa-profesion {
-        width: 270px;
+        width: 430px;
         overflow: hidden;
         float: left;
         border: 2px solid #000;
@@ -220,13 +274,14 @@
         margin-right: 10px;
     }
 
+    .webform-conditional-processed .content-datos select.profesion {
+      background-position: 400px center;
+      max-width: 500px;
+    }
+
     .webform-conditional-processed .content-datos .profesion {
         width: 120%;
         border:0;
-    }
-
-    .webform-conditional-processed .content-datos select.profesion {
-        background-position: 230px center;
     }
 
     /* content-direccion ----------------------------------------------------- */
@@ -254,15 +309,15 @@
     }
 
     .webform-conditional-processed .content-direccion .nombre-via{
-        max-width: 490px;
+        max-width: 405px;
     }
 
     .webform-conditional-processed .content-direccion .numero-bloque{
-        max-width: 370px;
+        max-width: 215px;
     }
 
     .webform-conditional-processed .content-direccion .postal{
-        max-width: 290px;
+        max-width: 92px;
     }
 
     .webform-conditional-processed .content-direccion .poblacion{
@@ -271,7 +326,7 @@
 
     .webform-conditional-processed .content-direccion .capa-provincia,
     .webform-conditional-processed .content-direccion .capa-pais{
-        width: 330px;
+        width: 281px;
         overflow: hidden;
         float: left;
         border: 2px solid #000;
@@ -287,7 +342,8 @@
 
     .webform-conditional-processed .content-direccion select.provincia,
     .webform-conditional-processed .content-direccion select.pais {
-        background-position: 290px center;
+        background-position: 245px center;
+        max-width: 290px;
     }
 
     /* content-cuenta ----------------------------------------------------- */
@@ -341,7 +397,7 @@
     }
 
     .webform-conditional-processed .content-cuenta .ncuenta{
-        max-width: 270px;
+        max-width: 322px;
     }
 
     /* content-end-form ----------------------------------------------------- */
@@ -415,13 +471,15 @@
         height: 100px;
         font-size: 46px;
         text-align: center;
-        float: left;
         clear: both;
         background: #f1e60d;
         border: 0;
+        /** IMPORTANT == COMMENT PARA APLICAR GRID DE BOOTSTRAP == FELIPEGILESTUDIO **/
+
+        float: left;
         margin-top: -130px;
         margin-left: 71%;
-        /*line-height: 100px;*/
+
     }
 
     /* boton previo */
@@ -443,7 +501,7 @@
 
     /* caja botones y politica */
     .box-form-es  .webform-conditional-processed .form-actions {
-        margin: -30px 0px 0px 0px;
+        margin: -30px 0px 0px -55px;
     }
 
     .content-end-form  .webform-conditional-processed .botons-form{
@@ -559,10 +617,15 @@
     padding: 5px;
     font-size: 40px;
     background-color: #eee;
-    border: 1px solid #000;
+    border: 1px solid #333;
 }
 
-/* boton enviar */
+.preview .warning p {
+    font-style: inherit;
+    font-size: 18px;
+    text-decoration: none;
+}
+
 .preview .form-actions .form-submit {
     font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
     /*width: 100%;*/
@@ -590,19 +653,6 @@
 .preview .webform-submit {
     margin-left: 78%;
     max-width: 300px;
-
-}
-
-.box-form-es .preview .form-actions {
-    margin: 150px 0px 0px 0px;
-}
-
-.content-end-form .preview .botons-form{
-    margin-top: 0px;
-}
-
-.box-form-es .preview span {
-    font-size: 20px;
 }
 
 .preview .content-direccion {
@@ -616,6 +666,20 @@
     float: left;
     margin-left: 1000px;
     margin-top: -600px;
+}
+
+/* boton enviar */
+
+.box-form-es .preview .form-actions {
+    margin: 150px 0px 0px 0px;
+}
+
+.content-end-form .preview .botons-form{
+    margin-top: 0px;
+}
+
+.box-form-es .preview span {
+    font-size: 20px;
 }
 
 
@@ -650,8 +714,10 @@
 }
 
 #share-buttons .ai-accion-firma-compartir__header {
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 0px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .field-name-body {
@@ -665,10 +731,10 @@
 /****************************** Responsive *******************************/
 
 /* max-width: 1400px */
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1370px) {
 
     .content-form{
-        max-width:960px;
+        max-width: 985px; /*960*/
     }
 
     .box-form-es {
@@ -676,39 +742,77 @@
         float: none;
     }
 
-    .webform-conditional-processed .content-datos select.document {
-        background-position: 90px center;
+    /* content-datos */
+
+    .webform-conditional-processed .content-datos .fila-1 input,
+    .webform-conditional-processed .content-datos .fila-3 input {
+        max-width: 185px;
     }
 
-    .webform-conditional-processed .content-datos .fila-3 label {
-        clear: both;
-        margin-top: 20px;
+    .webform-conditional-processed .content-datos .fila-1 .nombre{
+      max-width: 185px;
     }
 
-    .webform-conditional-processed .content-datos .capa-fechas,
-    .webform-conditional-processed .content-datos .capa-year {
-        margin-top: 20px;
+    .webform-conditional-processed .content-datos .email {
+        max-width: 275px;
     }
 
-    .box-es-right {
-        width: 100%;
-        float: none;
+    .webform-conditional-processed .content-datos .capa-profesion {
+        width: 361px;
     }
 
-    .box-es-right .three-column {
-        max-width: 306px;
-        min-height: 420px;
+    .webform-conditional-processed .content-datos select.profesion {
+        background-position: 331px center;
+        max-width: 371px;
+    }
+
+    .content-form .webform-conditional-processed .caja-content .capa-fechas div div{
+        width: 97px;
+    }
+
+    /* content-direccion */
+
+    .webform-conditional-processed .content-direccion .numero-bloque {
+        max-width: 200px;
+    }
+
+    .webform-conditional-processed .content-direccion .nombre-via {
+        max-width: 340px;
+    }
+
+    .preview .content-direccion {
         float: left;
-        margin-left: 20px;
+        margin-right: 200px;
+        margin-left: 500px;
+        margin-top: -520px;
     }
 
-    .box-es-right .three-column:first-child {
-        margin-left: 0;
+    .webform-conditional-processed .content-direccion .capa-provincia,
+    .webform-conditional-processed .content-direccion .capa-pais {
+        width: 240px;
     }
 
-    .webform-conditional-processed .content-datos .capa-fechas div div {
-        margin-top: 20px;
+    .webform-conditional-processed .content-direccion select.provincia,
+    .webform-conditional-processed .content-direccion select.pais {
+        background-position: 210px center;
     }
+
+    /* cuenta */
+
+    .webform-conditional-processed .content-cuenta .ncuenta {
+        max-width: 310px;
+    }
+
+    .webform-conditional-processed .content-cuenta .dc {
+        max-width: 65px;
+    }
+
+    .webform-conditional-processed .content-cuenta .entidad,
+    .webform-conditional-processed .content-cuenta .oficina {
+        max-width: 125px;
+    }
+
+    /* submit */
 
     .box-form-es .webform-conditional-processed .button-primary{
         float: left;
@@ -722,29 +826,42 @@
         max-width: 300px;
     }
 
-    .preview .content-direccion {
+    /* 3 cajas laterales */
+
+    /** CUSTOMS == FELIPEGILESTUDIO - 15/SEPTEMBER 2016 **/
+    /** CORRIGIENDO PROBLEMA GRAVE QUE TAPABA EL FORM ENTERO EN EL IPAD, 1 Y 2 - VER 3 Y 4 - PORTAIT - COLUMNA DCHA Y BLOQUE EXTENDIDO **/	 /* IMPORTANTE */
+	  .box-es-right {
+		    width: 100%;
+		    float: left;
+        padding-right: 0px;
+        /* TENÍA ====
+        .box-es-right {
+				    width: 100%;
+						float: none;
+    		} */
+	  }
+	  /** end CUSTOMS == FELIPEGILESTUDIO - 15/SEPTEMBER 2016 **/
+
+    .box-es-right .three-column {
+        max-width: 304px;
+        min-height: 451px;
         float: left;
-        margin-right: 200px;
-        margin-left: 500px;
-        margin-top: -420px;
+        margin-left: 20px;
     }
+
+    .box-es-right .three-column:first-child {
+        margin-left: 0;
+    }
+
+    /* pagina confirmacion */
 
     .preview .content-cuenta {
-        float: none;
-        margin-left: 0px;
-        margin-top: -0px;
+      float: none;
+      margin-left: 0px;
+      margin-top: -0px;
     }
-
 }
 
-/* max-width: 986px */
-@media only screen and (max-width: 1200px) {
-
-    .webform-conditional-processed .content-cuenta .ncuenta{
-        /*margin-top:20px;*/
-    }
-
-}
 /* max-width: 986px */
 @media only screen and (max-width: 986px) {
 
@@ -755,86 +872,165 @@
     .box-form-es span{
         font-size: 37px;
         line-height: 37px;
-
     }
 
-    .webform-conditional-processed .content-datos .fila-1 input, .content-datos .fila-3 input {
-        max-width: 222px;
+    /* cuota */
+
+    .webform-conditional-processed .content-colaborar .capa-other-quant {
+        margin-left: -16px;
+    }
+
+    /* datos */
+
+    .webform-conditional-processed .content-datos .fila-1,
+    .webform-conditional-processed .content-datos .fila-2,
+    .webform-conditional-processed .content-datos .fila-3 {
+        margin-top: 20px;
+    }
+
+    .content-form .webform-conditional-processed .caja-content label {
+        font-size: 17px;
+    }
+
+    .webform-conditional-processed .content-datos .fila-1 input{
+        max-width: 133px;
+    }
+
+    .webform-conditional-processed .content-datos .fila-1 .nombre {
+        width: 133px;
+    }
+
+    .webform-conditional-processed .content-datos .fila-1 .segundo-apellido {
+        max-width: 135px;
     }
 
     .webform-conditional-processed .content-datos .capa-document {
-        width: 100%px;
+        width: 100%;
     }
 
-    .webform-conditional-processed .content-datos .number-dni{
-        max-width: 200px;
+    .webform-conditional-processed .content-datos select.genero {
+        float: left;
+    }
+
+    .webform-conditional-processed .content-datos .info-nif {
+        margin-top: 15px;
+        font-size: 17px;
+    }
+
+    .webform-conditional-processed .content-datos a {
+        font-size: 17px;
+    }
+
+    .webform-conditional-processed .content-datos .capa-document {
+        max-width: 130px;
+    }
+
+    .webform-conditional-processed .content-datos select.document {
+        background-position: 106px center;
+    }
+
+    .webform-conditional-processed .content-datos .fila-1 .number-dni {
+        max-width: 133px;
+    }
+
+    .webform-conditional-processed .content-datos .email {
+        width: 235px;
     }
 
     .webform-conditional-processed .content-datos .mobile {
-        max-width: 200px;
+        max-width: 110px;
     }
 
-    .webform-conditional-processed .content-datos .capa-genero{
-        margin-bottom: 20px;
+    .webform-conditional-processed .content-datos .capa-profesion {
+        width: 320px;
     }
 
+    .webform-conditional-processed .content-datos select.profesion {
+        background-position: 286px center;
+        max-width: 330px;
+    }
+
+    /*.webform-conditional-processed .content-datos .profesion option:checked {
+        max-width: 245px;
+    }*/
+
+    .webform-conditional-processed .content-datos .capa-genero,
     .webform-conditional-processed .content-datos .capa-language {
-        width: 175px;
+        width: 143px;
     }
 
     .webform-conditional-processed .content-datos .language {
         width: 112%;
     }
 
+    .webform-conditional-processed .content-datos select.genero,
     .webform-conditional-processed .content-datos select.language {
-        background-position: 145px center;
+        background-position: 110px center;
     }
+
+    .webform-conditional-processed .content-datos .capa-fechas label {
+        margin-left: 0px;
+    }
+
+    /* direccion */
+
+    .webform-conditional-processed .content-direccion .capa-tipo-via,
+    .webform-conditional-processed .content-direccion .numero-bloque,
+    .webform-conditional-processed .content-direccion .postal {
+        width: 25%;
+    }
+
+    .webform-conditional-processed .content-direccion .poblacion{
+        width: 33%;
+    }
+
+    .webform-conditional-processed .content-direccion .nombre-via,
+    .webform-conditional-processed .content-direccion .capa-provincia,
+    .webform-conditional-processed .content-direccion .capa-pais {
+        width: 31%;
+    }
+
+    .webform-conditional-processed .content-direccion select.provincia,
+    .webform-conditional-processed .content-direccion select.pais,
+    .webform-conditional-processed .content-direccion select.tipo-via {
+        background-position: 78% center;
+    }
+
+    /* cuenta */
+
+    .webform-conditional-processed .content-cuenta .input-generic {
+        width: 15.5%;
+        max-width: 100%;
+    }
+
+    .webform-conditional-processed .content-cuenta select.iban-letras {
+        background-position: 60px center;
+    }
+
+    .webform-conditional-processed .content-cuenta .countryid {
+        max-width: 120%;
+        width: 112%;
+    }
+
+    .webform-conditional-processed .content-cuenta .entidad,
+    .webform-conditional-processed .content-cuenta .oficina {
+        width: 15%;
+    }
+
+    .webform-conditional-processed .content-cuenta .iban-numero,
+    .webform-conditional-processed .content-cuenta .dc {
+        width: 10%;
+    }
+
+    .webform-conditional-processed .content-cuenta .ncuenta {
+        width: 28%;
+    }
+
+    /* 3 columnas */
 
     .box-es-right .three-column {
         max-width: 242px;
         min-height: 418px;
-    }
-
-    .webform-conditional-processed .content-direccion .capa-tipo-via {
-        width: 100%;
-    }
-
-    .webform-conditional-processed .content-direccion .nombre-via {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    .webform-conditional-processed .content-direccion .numero-bloque {
-        max-width: 100%;
-    }
-
-    .webform-conditional-processed .content-direccion .postal {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    .webform-conditional-processed .content-direccion .poblacion,
-    .webform-conditional-processed .content-direccion .capa-pais {
-        max-width: 100%;
-    }
-
-    .webform-conditional-processed .content-direccion .capa-provincia,
-    .webform-conditional-processed .content-direccion .capa-pais {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .webform-conditional-processed .content-direccion select.provincia,
-    .webform-conditional-processed .content-direccion select.pais {
-        background-position: 80% center;
-    }
-
-    .webform-conditional-processed .content-direccion select.tipo-via {
-        background-position: 83% center;
-    }
-
-    .webform-conditional-processed .content-cuenta .ncuenta {
-        margin-top: 20px;
     }
 
     .box-es-right .three-column {
@@ -848,12 +1044,16 @@
         margin-left: auto;
     }
 
+    /* botones */
+
     .box-form-es .webform-conditional-processed .button-primary{
         float: left;
         margin-top: -130px;
         margin-left: 59%;
         margin-bottom: 40px;
     }
+
+    /* página de confirmacion */
 
     .preview .webform-submit {
         margin-left: 61%;
@@ -877,7 +1077,7 @@
 /* max-width: 769px */
 @media only screen and (max-width: 769px) {
 
-    .content-form{
+    .content-form {
         max-width:630px;
     }
 
@@ -886,128 +1086,160 @@
         line-height: 30px;
     }
 
-    .content-form fieldset {
-        margin-top: 0;
+    .webform-conditional-processed .input-generic{
+      float: none;
+      width: 100%;
+      max-width: 120%;
     }
 
-    .webform-conditional-processed .content-datos .fila-1, .content-datos .fila-3 {
-        margin-top: 0;
-    }
+    /* colaborar */
 
-    .webform-conditional-processed .content-datos .fila-2.clearfix {
-        margin-top: 20px;
+    .webform-conditional-processed .content-colaborar .fila-1 .input-generic,
+    .webform-conditional-processed .content-colaborar .fila-2 .input-generic,
+    .webform-conditional-processed .content-colaborar .fila-3 .input-generic {
+        max-width: 129%;
     }
 
     .webform-conditional-processed .content-colaborar .capa-selecttime {
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .webform-conditional-processed .content-colaborar select.selecttime {
-        background-position: 80% center;
+        background-position: 81% center;
     }
 
-    .webform-conditional-processed .content-datos .fila-1 input, .content-datos .fila-3 input {
-        max-width: 100%;
+    .webform-conditional-processed .caja-checkbox {
+        margin-left: 35px;
+    }
+
+    .webform-conditional-processed .content-colaborar .capa-other-quant {
+        margin-left: -20px;
+    }
+
+    .webform-conditional-processed .content-colaborar .capa-other-quant {
         margin-top: 20px;
     }
 
-    .webform-conditional-processed .content-datos .margin-medium{
-        margin: 0;
+    /* content-datos */
+
+    .webform-conditional-processed .content-datos .fila-1 .input-generic,
+    .webform-conditional-processed .content-datos .fila-2 .input-generic,
+    .webform-conditional-processed .content-datos .fila-3 .input-generic {
+        max-width: 129%;
     }
 
-    .webform-conditional-processed .content-datos .capa-document {
-        width: 30%;
-    }
-
-    .webform-conditional-processed .content-datos select.document {
-        background-position: 70px center;
-    }
-
-    .webform-conditional-processed .content-datos .number-dni{
-        max-width: 60%;
-    }
-
-    .webform-conditional-processed .content-datos .capa-genero {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 20px;
-    }
-
-    .webform-conditional-processed .content-datos select.profesion {
-        background-position: 80% center;
-    }
-
-    .webform-conditional-processed .content-datos .mobile{
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    .webform-conditional-processed .content-datos .capa-profesion {
-        width: 100%;
-        margin-top: 20px;
-
-    }
-
-    .webform-conditional-processed .content-datos .capa-language {
-        width: 80%;
-        margin-top: 20px;
-    }
-
-    .webform-conditional-processed .content-datos .info-language{
-        margin-top: 20px;
-    }
-
+    .webform-conditional-processed .content-datos .fila-1 .nombre,
+    .webform-conditional-processed .content-datos .capa-profesion,
+    .webform-conditional-processed .content-datos .email,
+    .webform-conditional-processed .content-datos .mobile,
+    .webform-conditional-processed .content-datos .capa-genero,
     .webform-conditional-processed .content-datos .capa-fechas {
         width: 100%;
     }
 
+    .webform-conditional-processed .content-datos .primer-apellido,
+    .webform-conditional-processed .content-datos .segundo-apellido,
+    .webform-conditional-processed .content-datos .email,
+    .webform-conditional-processed .content-datos .capa-document,
+    .webform-conditional-processed .content-datos .fila-1 .number-dni,
+    .webform-conditional-processed .content-datos .mobile,
+    .webform-conditional-processed .content-datos .capa-language,
+    .webform-conditional-processed .content-datos .info-language,
+    .content-form .webform-conditional-processed .caja-content .capa-fechas div div,
+    .content-form .webform-conditional-processed .caja-content .capa-fechas label {
+        margin-top: 20px;
+    }
+
+    .webform-conditional-processed .content-datos .capa-document {
+        width: 33%;
+        max-width: 40%;
+    }
+
+    .webform-conditional-processed .content-datos select.document {
+        background-position: 75% center;
+    }
+
+    .webform-conditional-processed .content-datos .fila-1 .number-dni{
+        max-width: 58%;
+    }
+
+    .webform-conditional-processed .content-datos select.profesion,
     .webform-conditional-processed .content-datos select.genero {
-        background-position: 80% center;
+        background-position: 77% center;
+    }
+
+    .webform-conditional-processed .content-datos .capa-language {
+        width: 84%;
     }
 
     .webform-conditional-processed .content-datos select.language {
-        background-position: 86% center;
+        background-position: 84% center;
     }
 
-    /*.content-datos .capa-fechas div select {
-        background-position: 73% center;
+    /* direccion */
+
+    .webform-conditional-processed .content-direccion select.provincia,
+    .webform-conditional-processed .content-direccion select.pais {
+      max-width: 102%;
     }
 
-    .content-datos .capa-fechas div div {
-        width: 100%;
-        float: none;
-        clear: both;
-        margin-bottom: 20px;
-    }*/
-
-    .webform-conditional-processed .content-cuenta .iban-numero {
-        max-width: 74%;
+    .webform-conditional-processed .content-direccion .capa-tipo-via,
+    .webform-conditional-processed .content-direccion .nombre-via,
+    .webform-conditional-processed .content-direccion .numero-bloque,
+    .webform-conditional-processed .content-direccion .poblacion,
+    .webform-conditional-processed .content-direccion .postal,
+    .webform-conditional-processed .content-direccion .capa-provincia,
+    .webform-conditional-processed .content-direccion .capa-pais {
+      width: 100%;
+      max-width: 100%;
     }
 
-    .webform-conditional-processed .content-cuenta .iban-numero {
-        margin-right: 0;
+    .webform-conditional-processed .content-direccion .nombre-via,
+    .webform-conditional-processed .content-direccion .numero-bloque,
+    .webform-conditional-processed .content-direccion .postal,
+    .webform-conditional-processed .content-direccion .capa-provincia,
+    .webform-conditional-processed .content-direccion .capa-pais {
+      margin-top: 20px;
     }
 
-    .webform-conditional-processed .content-cuenta .entidad {
-        max-width: 100%;
-        margin-top: 20px;
+    .webform-conditional-processed .content-direccion select.provincia,
+    .webform-conditional-processed .content-direccion select.pais{
+        background-position: 94% center;
+    }
+    .webform-conditional-processed .content-direccion select.tipo-via {
+      background-position: 84% center;
     }
 
+    /* cuenta */
+
+    .webform-conditional-processed .content-cuenta .capa-iban-letras{
+      max-width: 20%;
+      width: 19%;
+    }
+
+    .webform-conditional-processed .content-cuenta select.iban-letras {
+      background-position: 52px center;
+    }
+
+    .webform-conditional-processed .content-cuenta .entidad,
     .webform-conditional-processed .content-cuenta .oficina {
-        max-width: 100%;
-        margin-top: 20px;
+        max-width: 25%;
+        width: 22.5%;
     }
 
+    .webform-conditional-processed .content-cuenta .iban-numero,
     .webform-conditional-processed .content-cuenta .dc {
-        max-width: 100%;
-        margin-top: 20px;
+        max-width: 15%;
+        width: 12%;
     }
 
     .webform-conditional-processed .content-cuenta .ncuenta {
         max-width:100%;
+        width: 100%;
         margin-top: 20px;
     }
+
+    /* cajas laterales */
 
     .box-es-right .three-column {
         max-width: 100%;
@@ -1015,6 +1247,8 @@
         margin-left: 0;
         float: none;
     }
+
+    /* botones */
 
     .box-form-es .webform-conditional-processed  .button-primary{
         float: left;
@@ -1035,14 +1269,21 @@
         margin: 0px 0px 50px 0px;
     }
 
-    /* caja botones y politica */
     .box-form-es .webform-conditional-processed .form-actions {
         margin: 30px 0px 0px 0px;
     }
 
-    .preview .webform-submit {
-        margin-left: 74%;
-        max-width: 135px;
+    /* pagina confirmacion */
+
+    .preview .form-actions .form-submit {
+        margin-left: 0;
+        float: none;
+        clear: none;
+        margin-top: 10px;
+    }
+
+    .box-form-es .preview .form-actions {
+        margin: 0px;
     }
 
     .preview .webform-previous {
@@ -1067,8 +1308,8 @@
 /* max-width: 480px */
 @media only screen and (max-width: 480px) {
 
-    .content-form{
-        max-width:320px;
+    .content-form {
+        max-width: 320px;
     }
 
     .content-form h2 {
@@ -1083,22 +1324,15 @@
         display: none;
     }
 
-    .webform-conditional-processed .content-colaborar .capa-selecttime {
-        width: 100%;
-        float: none;
-        margin-right: 0;
+    .box-form-es .content-cuenta img {
+        display: block;
     }
 
-    .webform-conditional-processed .content-colaborar select.selecttime {
-        background-position: 79% center;
-    }
-
-    .webform-conditional-processed .content-colaborar .cuotas {
-        margin-top: 0;
-    }
-
-    .webform-conditional-processed .content-colaborar .cuotas label {
-        margin-right: 4px;
+    .webform-conditional-processed .content-colaborar .fila-1,
+    .webform-conditional-processed .content-datos .fila-1,
+    .webform-conditional-processed .content-direccion .fila-1,
+    .webform-conditional-processed .content-cuenta .fila-1 {
+      margin-top: 0px;
     }
 
     .box-form-es span {
@@ -1109,146 +1343,161 @@
         display: block;
     }
 
-    .webform-conditional-processed .content-datos .capa-document {
-        width: 34%;
-    }
-
-    .webform-conditional-processed .content-datos .number-dni {
-        max-width: 52%;
-    }
-
-    .webform-conditional-processed .content-datos .capa-profesion {
-        width: 100%;
+    .content-form .webform-conditional-processed .caja-checkbox div {
+        /*margin-top: 10px;*/
+        text-align: center;
+        margin-bottom: 10px;
         float: none;
     }
 
-    .webform-conditional-processed .content-datos  input#email {
-        margin-bottom: 20px;
+    /** CUSTOMS - CAMBIANDO ASPECTO ICONO == FELIPEGILESTUDIO - 20/SEPTEMBER 2016 **/
+    /*span.image-icon-titles img {
+      margin: 0 auto;
+      top: 0px;
+      position: relative;
+    }*/
+
+    /* colaborar */
+    .webform-conditional-processed .caja-checkbox {
+      margin-left: 0px;
     }
 
-    .webform-conditional-processed .content-datos .capa-language {
-        width: 75%;
+    .webform-conditional-processed .content-colaborar .cuotas div {
+        float: none;
+        margin: 0;
     }
 
-    .webform-conditional-processed .content-datos .fila-3 label {
-        clear: both;
+    .webform-conditional-processed .content-colaborar .capa-other-quant {
+        float: none;
+        margin: auto;
+    }
+
+    .webform-conditional-processed .content-colaborar .cuotas {
+        float: none;
+        text-align: center;
         margin-top: 0;
     }
 
-    .webform-conditional-processed .content-datos .fila-3 label {
-        line-height: 20px;
+    .webform-conditional-processed .content-colaborar .capa-selecttime {
+        width: 100%;
+        float: none;
+        margin-right: 0;
     }
+
+    .webform-conditional-processed .content-colaborar select.selecttime {
+        background-position: 79% center;
+    }
+
+    .webform-conditional-processed .content-colaborar .cuotas label {
+        margin-right: 4px;
+    }
+
+    /* content datos */
+
+    .webform-conditional-processed .content-datos .fila-1 .number-dni {
+      max-width: 52%;
+    }
+
+    .webform-conditional-processed .content-datos .capa-language {
+        width: 72%;
+    }
+
+    .content-form .webform-conditional-processed .caja-content .capa-fechas label {
+        clear: none;
+        float: none;
+        margin-top: 10px;
+        margin-bottom: -50px;
+    }
+
+    /* fechas */
 
     .webform-conditional-processed .content-datos .capa-fechas {
         width: 100%;
     }
 
-    .webform-conditional-processed .content-datos .capa-fechas  div div{
-        float: left;
-        width: 100%;
+    .content-form .webform-conditional-processed .caja-content .capa-fechas div div {
+        margin-top: 10px;
+        width: 31%;
     }
 
-    /*.content-datos .capa-year {
-        width: 100%;
-    }*/
-
-    /*.content-datos select.year {
-        background-position: 72% center;
+    .content-form .webform-conditional-processed .caja-content .capa-fechas div select {
+        background-position: 62% center;
     }
 
-    .content-datos select.day, .content-datos select.month {
-        background-position: 75% center;
-    }*/
+    /* direccion */
+    .webform-conditional-processed .content-direccion select.tipo-via,
+    .webform-conditional-processed .content-direccion select.provincia,
+    .webform-conditional-processed .content-direccion select.pais {
+        background-position: 91% center;
+        max-width: 105%;
 
-    .webform-conditional-processed .content-datos a{
-        float: left;
-        height: 44px;
-        line-height: 50px;
-        margin-right: 0px;
     }
 
-    .webform-conditional-processed .content-datos .capa-fechas  div select {
-        background-position: 70% center;
-    }
-
-    .webform-conditional-processed .content-datos select.profesion {
-        background-position: 78% center;
-    }
-
-    .webform-conditional-processed .content-datos select.genero {
-        background-position: 73% center;
-    }
-
-    .webform-conditional-processed .content-direccion select.tipo-via {
-        background-position: 84% center;
-    }
-
-    .webform-conditional-processed .content-direccion select.provincia, .content-direccion select.pais {
-        background-position: 79% center;
-    }
-
-    .webform-conditional-processed .content-datos .fila-3 label{
-        height: 0px;
-    }
-
-    .webform-conditional-processed .content-cuenta .iban-numero {
-        max-width: 100%;
-        display: block;
-        float: none;
-    }
-
-    .webform-conditional-processed .content-cuenta .capa-iban-letras {
-        width: 50%;
-        float: left;
-    }
-
-    .webform-conditional-processed .content-cuenta .capa-iban-numero {
-        float: left;
-        width: 40%;
-        margin-top: 0px;
-    }
+    /* cuenta */
 
     .webform-conditional-processed .content-cuenta select.iban-letras {
-        background-position: 70% center;
+        background-position: 90px center;
+    }
+
+    .webform-conditional-processed .content-cuenta .capa-iban-letras,
+    .webform-conditional-processed .content-cuenta .iban-numero{
+        width: 45.5%;
+        max-width: 50%;
+    }
+
+    .webform-conditional-processed .content-cuenta .entidad,
+    .webform-conditional-processed .content-cuenta .oficina{
+        width: 33%;
+        max-width: 50%;
+        margin-top: 20px;
+    }
+
+    .webform-conditional-processed .content-cuenta .dc {
+        width: 20%;
+        max-width: 30%;
+        margin-top: 20px;
+    }
+
+    .webform-conditional-processed .content-cuenta .ncuenta {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* botones y politica */
+    .webform-conditional-processed .content-end-form .politica {
+        float: left;
+        width: 200px;
     }
 
     .webform-conditional-processed .content-end-form .botons-form img {
         float: none;
         margin: 0px auto auto;
         clear: both;
-        top: -30px;
+        top: 0px;
     }
 
-    .box-form-es .webform-conditional-processed  .button-primary{
+    .box-form-es .webform-conditional-processed .button-primary {
         float: none;
-        margin-top: -150px;
-        margin-left: 0;
-        margin-bottom: 20px;
+        margin: 0px;
+        margin-top: -30px;
+        margin-left: 10px;
     }
 
-    .webform-conditional-processed .content-end-form {
-        padding: 0px;
-        margin: 0px 0px 50px 0px;
+    /* header */
+    /*.responsive--bg {
+      visibility: hidden;
+    }*/
+    .image-header__content--medium{
+        margin-top: 72px;
     }
 
-    /* header navbar*/
-    .image-header, .image-header--sunken {
-        margin-top: 50px;
-    }
-
-    .webform-conditional-processed .content-end-form .botons-form {
-        margin-top: 30px;
-    }
-
-    /* boton enviar */
+    /* pagina confirmacion */
     .preview .form-submit {
         font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
-        /*width: 100%;*/
         height: 70px;
         font-size: 30px;
         text-align: center;
-        /*float: left;
-        clear: both;*/
         background: #f1e60d;
     }
 
@@ -1287,32 +1536,71 @@
         margin-left: 0px;
         margin-top: -0px;
     }
+}
 
-    .webform-conditional-processed .content-cuenta .capa-iban-letras {
-        margin-bottom: 20px;
-    }
+/* max-width: 275px - móviles antiguos */
+@media only screen and (max-width: 275px) {
 
-    .webform-conditional-processed .content-end-form .politica {
-        float: left;
-        width: 200px;
-    }
+  .box-form-es .fila-1 p {
+    font-size: 0px;
+  }
 
-    .content-form fieldset {
-        margin-top: 20px;
-    }
+  .webform-conditional-processed .content-datos .info-nif,
+  .webform-conditional-processed .content-datos .info-language {
+      visibility: hidden;
+      margin: 0px;
+      margin-top: -10px;
+      float: none;
+      line-height: 0;
+      font-size: 0px;
+  }
 
-    .webform-conditional-processed .content-colaborar .cuotas div {
-        float: none;
-        margin: 0;
-    }
+  .webform-conditional-processed .content-datos .capa-document {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #000;
+  }
 
-    .webform-conditional-processed .content-colaborar .capa-other-quant {
-        float: none;
-        margin: auto;
-    }
+  .webform-conditional-processed .content-datos select.document {
+      background-position: 75% center;
+      border: 0;
+  }
 
-    .webform-conditional-processed .content-colaborar .cuotas {
-        float: none;
-        text-align: center;
-    }
+  .webform-conditional-processed .content-datos .fila-1 .number-dni {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 10px;
+      float: none;
+      padding-left: 10px;
+      left: 0;
+      margin: 0;
+      margin-top: 20px;
+  }
+
+  .webform-conditional-processed .content-datos .capa-language {
+      width: 100%;
+  }
+
+  .webform-conditional-processed .content-cuenta select.iban-letras {
+      background-position: 60px center;
+  }
+
+  .webform-conditional-processed .content-datos .capa-fechas {
+      float: none;
+      width: 100%;
+  }
+
+  .content-form .webform-conditional-processed .caja-content .capa-fechas div div {
+      float: none;
+      margin-top: 10px;
+      width: 100%;
+  }
+
+  .content-form .webform-conditional-processed .caja-content .capa-fechas div select {
+      float: none;
+      background-position: 70% center;
+  }
+
 }
