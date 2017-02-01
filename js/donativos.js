@@ -29,9 +29,9 @@ jQuery(function($) {
     else if( get_campaign != '' && get_campaign ){ //pk_campaign
         contrib_source_input.val(get_campaign);
     }
-    else {
+    /*else {
         contrib_source_input.val('web');
-    }
+    }*/
     // pk_kwd
     if( get_kw != '' && get_kw ){
         contrib_kw_input.val(get_kw);
@@ -75,18 +75,5 @@ jQuery(function($) {
           $(".content-datos").removeClass("cif");
         }
     });
-
-    // Añadir parametro a URL para tracking a preview
-    var form = $('.webform-client-form');
-    if( !form.hasClass('preview') ){
-        form.submit( function() {
-          form.attr("action",  window.location.pathname + '?preview=1');
-        });
-    }
-    else {
-      form.submit( function() {
-        form.attr("action",  window.location.pathname);
-      });
-    }
 
 })

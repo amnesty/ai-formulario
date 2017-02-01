@@ -8,10 +8,10 @@ function getUrlVars() {
 }
 
 jQuery(function($) {
-    // url
-    var url = window.location.pathname;
 
-    // Origenes
+    // ************** Origenes ****************
+
+    var url = window.location.pathname;
     var cat_source = "ut01";
     var get_source = getUrlVars()["origen"];
     var get_campaign = getUrlVars()["pk_campaign"];
@@ -65,8 +65,31 @@ jQuery(function($) {
         source_input.val(get_utm_term);
     }
 
-    // Añadir títulos a la página de preview
+    /*********** Página de confirmación ***********/
 
+    // Añadir parametro a URL para tracking a PREVIEW
+    var url = window.location.href;
+    var get_params = "";
+    // conservar los parámetros GET menos el de preview
+    if(url.includes("?")){
+      get_params = window.location.href.split("?")[1];
+      if(get_params.includes("preview")){
+        get_params = get_params.replace(/[&]?preview=1[&]?/g, "");
+      }
+    }
+    var form = $('.webform-client-form');
+    if( !form.hasClass('preview') ){
+        form.submit( function() {
+          form.attr("action",  window.location.pathname + '?preview=1' + (get_params != "" ? ('&' + get_params) : '') );
+        });
+    }
+    else {
+      form.submit( function() {
+        form.attr("action",  window.location.pathname + (get_params != "" ? ('?' + get_params) : '') );
+      });
+    }
+
+    // Añadir títulos a la página de preview
     if( $(".webform-client-form").first().hasClass("preview") ){
         // título confirma tus datos
         if(url.indexOf("/cat") > -1){
