@@ -61,9 +61,11 @@ jQuery(function($) {
   }
   if((urlVars['nacimiento'])){
     $nacimiento = urlVars['nacimiento'].split("-");
-    $(".day").val($nacimiento[0]);
-    $(".month").val($nacimiento[1]);
-    $(".year").val($nacimiento[2]);
+    $(".nacimiento").each(function(){
+      $(this).find(".day").val($nacimiento[0]);
+      $(this).find(".month").val($nacimiento[1]);
+      $(this).find(".year").val($nacimiento[2]);
+    });
   }
 
   // Dirección
