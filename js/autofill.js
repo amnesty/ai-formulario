@@ -28,6 +28,13 @@ jQuery(function($) {
     $(".frecuencia").val(urlVars['frec']);
   }
 
+  if((urlVars['inicio-pagos'])){
+    $inicio = urlVars['inicio-pagos'].split("-");
+    $(".inicio-pagos .day").val($inicio[0]);
+    $(".inicio-pagos .month").val($inicio[1]);
+    $(".inicio-pagos .year").val($inicio[2]);
+  }
+
   // Datos Personales
   if((urlVars['nombre'])){
     $(".nombre").val(decodeURIComponent(urlVars['nombre']));
@@ -61,9 +68,9 @@ jQuery(function($) {
   }
   if((urlVars['nacimiento'])){
     $nacimiento = urlVars['nacimiento'].split("-");
-    $(".nacimiento.day").val($nacimiento[0]);
-    $(".nacimiento.month").val($nacimiento[1]);
-    $(".nacimiento.year").val($nacimiento[2]);
+    $(".nacimiento .day").val($nacimiento[0]);
+    $(".nacimiento .month").val($nacimiento[1]);
+    $(".nacimiento .year").val($nacimiento[2]);
   }
 
   // Dirección
