@@ -1,3 +1,7 @@
+/***************************************
+**** Auto rellenado de datos via JS ****
+****************************************/
+
 // URL Vars
 function getUrlVars() {
     var vars = {};
@@ -135,7 +139,7 @@ jQuery(function($) {
   }
   //memkey
   if((urlVars['memkey'])){
-    $("[name='submitted[civicrm_1_contact_1_cg9_custom_21]']").val(urlVars['memkey']);
+    $("[name='submitted[civicrm_1_contact_1_cg9_custom_38]']").val(urlVars['memkey']);
   }
   //cnkey
   if((urlVars['cnkey'])){
