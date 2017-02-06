@@ -129,6 +129,19 @@ jQuery(function($) {
     $("#edit-submitted-caja-donativo-fila-2-revista-civicrm-1-contact-1-cg10-custom-22-2").attr("checked", true);
   }
 
+  // pvkey
+  if((urlVars['pvkey'])){
+    $("[name='submitted[civicrm_1_contact_1_cg9_custom_21]']").val(urlVars['pvkey']);
+  }
+  //memkey
+  if((urlVars['memkey'])){
+    $("[name='submitted[civicrm_1_contact_1_cg9_custom_21]']").val(urlVars['memkey']);
+  }
+  //cnkey
+  if((urlVars['cnkey'])){
+    $("[name='submitted[cnkey]']").val(urlVars['cnkey']);
+  }
+
   // Política desactivada por defecto
   //$(".check-politica").attr("checked", false);
 
