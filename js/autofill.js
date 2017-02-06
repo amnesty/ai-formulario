@@ -116,6 +116,19 @@ jQuery(function($) {
     $(".ncuenta").val(urlVars['cuenta']);
   }
 
+  // donativo
+  if((urlVars['donativo'])){
+    $(".donativo").val(urlVars['donativo']);
+  }
+
+  // revista en papel
+  if((urlVars['revista']) == 'si'){
+    $("#edit-submitted-caja-donativo-fila-2-revista-civicrm-1-contact-1-cg10-custom-22-1").attr("checked", true);
+  }
+  else if((urlVars['revista']) == 'no'){
+    $("#edit-submitted-caja-donativo-fila-2-revista-civicrm-1-contact-1-cg10-custom-22-2").attr("checked", true);
+  }
+
   // Política desactivada por defecto
   //$(".check-politica").attr("checked", false);
 
