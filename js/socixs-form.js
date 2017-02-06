@@ -30,7 +30,7 @@ jQuery(function($) {
         source_input.val(get_source);
 
         // contrib_source if exists
-        if( isset("[name='submitted[civicrm_1_contribution_1_cg21_custom_104]']") ){
+        if( $("[name='submitted[civicrm_1_contribution_1_cg21_custom_104]']") ){
           var contrib_source_input = $( "[name='submitted[civicrm_1_contribution_1_cg21_custom_104]']");
           contrib_source_input.val(get_source);
         }
