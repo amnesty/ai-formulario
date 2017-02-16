@@ -145,6 +145,10 @@ jQuery(function($) {
   if((urlVars['cnkey'])){
     $("[name='submitted[cnkey]']").val(urlVars['cnkey']);
   }
+  //outcome
+  if((urlVars['outcome'])){
+    $(".outcome").val(urlVars['outcome']);
+  }
 
   // Política desactivada por defecto
   //$(".check-politica").attr("checked", false);
