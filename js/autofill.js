@@ -146,8 +146,21 @@ jQuery(function($) {
     $("[name='submitted[cnkey]']").val(urlVars['cnkey']);
   }
   //outcome
-  if((urlVars['outcome'])){
-    $(".outcome").val(urlVars['outcome']);
+  if( outcome = urlVars['outcome'] ){
+    switch(outcome){
+      case 'C':
+        $("#edit-submitted-caja-donativo-fila-1-estado-estado-1").attr("checked", true);
+        break;
+      case 'NC':
+        $("#edit-submitted-caja-donativo-fila-1-estado-estado-2").attr("checked", true);
+        break;
+      case 'ILOCAL':
+        $("#edit-submitted-caja-donativo-fila-1-estado-estado-3").attr("checked", true);
+        break;
+      case 'TEL_ERR':
+        $("#edit-submitted-caja-donativo-fila-1-estado-estado-4").attr("checked", true);
+        break;
+    }
   }
 
   // Política desactivada por defecto
