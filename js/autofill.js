@@ -133,19 +133,23 @@ jQuery(function($) {
     $("#edit-submitted-caja-donativo-fila-2-revista-civicrm-1-contact-1-cg10-custom-22-2").attr("checked", true);
   }
 
+  // No llamar
+  if((urlVars['no-llam']) == 'si'){
+    $("#edit-submitted-caja-donativo-fila-2-revista-civicrm-1-contact-1-contact-privacy-1").attr("checked", true);
+  }
   // pvkey
   if((urlVars['pvkey'])){
     $("[name='submitted[civicrm_1_contact_1_cg9_custom_21]']").val(urlVars['pvkey']);
   }
-  //memkey
+  // memkey
   if((urlVars['memkey'])){
     $("[name='submitted[civicrm_1_contact_1_cg9_custom_38]']").val(urlVars['memkey']);
   }
-  //cnkey
+  // cnkey
   if((urlVars['cnkey'])){
     $("[name='submitted[cnkey]']").val(urlVars['cnkey']);
   }
-  //outcome
+  // Outcome
   if( outcome = urlVars['outcome'] ){
     switch(outcome){
       case 'C':
@@ -163,6 +167,11 @@ jQuery(function($) {
     }
   }
 
+  // Motivo
+  if( outcome = urlVars['motivo'] ){
+    $("#edit-submitted-caja-donativo-fila-1-estado-motivo").val(urlVars['motivo']);
+  }
+  
   // Política desactivada por defecto
   //$(".check-politica").attr("checked", false);
 
