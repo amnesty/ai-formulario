@@ -17,14 +17,14 @@ jQuery(function($) {
   var urlVars = getUrlVars();
 
   // Cuota
-  $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-1").attr("checked", false);
+  /*$("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-1").attr("checked", false);
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-2").attr("checked", false);
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-3").attr("checked", false);
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-4").attr("checked", true);
   $(".otra_cuota").attr("disabled", false);
   $(".otra_cuota").attr("enabled", true);
   $(".capa-other-quant").css("display", "block");
-  $(".otra_cuota").css("display", "block");
+  $(".otra_cuota").css("display", "block");*/
   if((urlVars['cuota'])){
     $(".otra_cuota").val(urlVars['cuota']);
   }
@@ -171,7 +171,7 @@ jQuery(function($) {
   if( outcome = urlVars['motivo'] ){
     $("#edit-submitted-caja-donativo-fila-1-estado-motivo").val(urlVars['motivo']);
   }
-  
+
   // Política desactivada por defecto
   //$(".check-politica").attr("checked", false);
 
