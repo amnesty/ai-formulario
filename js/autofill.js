@@ -147,29 +147,29 @@ jQuery(function($) {
   }
   // cnkey
   if((urlVars['cnkey'])){
-    $("[name='submitted[cnkey]']").val(urlVars['cnkey']);
+    $("[name='submitted[civicrm_1_activity_1_cg22_custom_105]']").val(urlVars['cnkey']);
   }
   // Outcome
   if( outcome = urlVars['outcome'] ){
     switch(outcome){
       case 'C':
-        $("#edit-submitted-caja-donativo-fila-1-estado-estado-1").attr("checked", true);
+        $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-106-1").attr("checked", true);
         break;
       case 'NC':
-        $("#edit-submitted-caja-donativo-fila-1-estado-estado-2").attr("checked", true);
+        $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-106-2").attr("checked", true);
         break;
       case 'ILOCAL':
-        $("#edit-submitted-caja-donativo-fila-1-estado-estado-3").attr("checked", true);
+        $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-106-3").attr("checked", true);
         break;
       case 'TEL_ERR':
-        $("#edit-submitted-caja-donativo-fila-1-estado-estado-4").attr("checked", true);
+        $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-106-4").attr("checked", true);
         break;
     }
   }
 
   // Motivo
   if( outcome = urlVars['motivo'] ){
-    $("#edit-submitted-caja-donativo-fila-1-estado-motivo").val(urlVars['motivo']);
+    $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-107").val(urlVars['motivo']);
   }
 
   // Política desactivada por defecto
