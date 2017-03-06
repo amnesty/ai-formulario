@@ -159,8 +159,8 @@ jQuery(function($) {
     $("[name='submitted[civicrm_1_activity_1_cg22_custom_105]']").val(urlVars['cnkey']);
   }
   // Outcome
-  outcome = urlVars['outcome'];
-  if( outcome ){
+  if( urlVars['outcome'] ){
+    var outcome = urlVars['outcome'];
     switch(outcome){
       case 'C':
         $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-106-1").attr("checked", true);
