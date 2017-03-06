@@ -159,7 +159,8 @@ jQuery(function($) {
     $("[name='submitted[civicrm_1_activity_1_cg22_custom_105]']").val(urlVars['cnkey']);
   }
   // Outcome
-  if( outcome = urlVars['outcome'] ){
+  outcome = urlVars['outcome'];
+  if( outcome ){
     switch(outcome){
       case 'C':
         $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-106-1").attr("checked", true);
@@ -177,7 +178,7 @@ jQuery(function($) {
   }
 
   // Motivo
-  if( outcome = urlVars['motivo'] ){
+  if( urlVars['motivo'] ){
     $("#edit-submitted-caja-donativo-fila-1-estado-civicrm-1-activity-1-cg22-custom-107").val(urlVars['motivo']);
   }
 
