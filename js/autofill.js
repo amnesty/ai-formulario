@@ -137,6 +137,17 @@ jQuery(function($) {
   if((urlVars['no-llam']) == 'si'){
     $("#edit-submitted-caja-donativo-fila-2-revista-civicrm-1-contact-1-contact-privacy-1").attr("checked", true);
   }
+
+  /* Para subida de cuota */
+  if(!(urlVars['cuota'])){
+      $("#edit-submitted-caja-colaborar-fila-1-estado-civicrm-1-activity-1-cg22-custom-108-1").attr)("checked", true);
+  }
+  else {
+      $("#edit-submitted-caja-colaborar-fila-1-estado-civicrm-1-activity-1-cg22-custom-108-2").attr)("checked", true);
+  }
+
+
+
   // pvkey
   if((urlVars['pvkey'])){
     $("[name='submitted[civicrm_1_contact_1_cg9_custom_21]']").val(urlVars['pvkey']);
