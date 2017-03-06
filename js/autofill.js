@@ -140,10 +140,10 @@ jQuery(function($) {
 
   /* Para subida de cuota */
   if(!(urlVars['cuota'])){
-      $("#edit-submitted-caja-colaborar-fila-1-estado-civicrm-1-activity-1-cg22-custom-108-1").attr)("checked", true);
+      $("#edit-submitted-caja-colaborar-fila-1-estado-civicrm-1-activity-1-cg22-custom-108-1").attr("checked", true);
   }
   else {
-      $("#edit-submitted-caja-colaborar-fila-1-estado-civicrm-1-activity-1-cg22-custom-108-2").attr)("checked", true);
+      $("#edit-submitted-caja-colaborar-fila-1-estado-civicrm-1-activity-1-cg22-custom-108-2").attr("checked", true);
   }
 
 
