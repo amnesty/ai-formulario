@@ -119,7 +119,7 @@ jQuery(function($) {
 
   // revista en papel
   if((urlVars['revista']) == 'si'){
-    $(".revista .form-item:nth-child(2) input").attr("checked", true);
+    $(".revista .form-item:nth-child(1) input").attr("checked", true);
   }
   else if((urlVars['revista']) == 'no'){
     $(".revista .form-item:nth-child(2) input").attr("checked", true);
