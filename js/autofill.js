@@ -142,14 +142,23 @@ jQuery(function($) {
   if((urlVars['pvkey'])){
     $("[name='submitted[civicrm_1_contact_1_cg9_custom_21]']").val(urlVars['pvkey']);
   }
+
   // memkey
   if((urlVars['memkey'])){
     $("[name='submitted[civicrm_1_contact_1_cg9_custom_38]']").val(urlVars['memkey']);
   }
+  else {
+    $("[name='submitted[civicrm_1_contact_1_cg9_custom_38]']").val(0);
+  }
+
   // cnkey
   if((urlVars['cnkey'])){
     $("[name='submitted[civicrm_1_activity_1_cg22_custom_105]']").val(urlVars['cnkey']);
   }
+  else {
+    $("[name='submitted[civicrm_1_activity_1_cg22_custom_105]']").val(0);
+  }
+
   // Outcome
   if( urlVars['outcome'] ){
     var outcome = urlVars['outcome'];
