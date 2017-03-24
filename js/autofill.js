@@ -66,7 +66,7 @@ jQuery(function($) {
     $nacimiento = urlVars['nacimiento'].split("-");
     $(".capa-fechas .day").val($nacimiento[0]);
     $(".capa-fechas .month").val($nacimiento[1]);
-    $(".capa-fechas .year").val($nacimiento[2]);
+    $(".capa-fechas .year").val($nacimiento[2]); 
   }
 
   // Dirección
