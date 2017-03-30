@@ -119,7 +119,7 @@ jQuery(function($) {
 
   // revista en papel
   if((urlVars['revista']) == 'no'){
-    $(".revista .form-item:nth-child(2) input").attr("checked", false);
+    $(".revista .form-item:nth-child(2) input").attr("checked", true);
   }
   else{
     $(".revista .form-item:nth-child(1) input").attr("checked", true);
@@ -127,10 +127,10 @@ jQuery(function($) {
 
   // No llamar
   if((urlVars['no-llam']) == 'si'){
-    $(".pref-com .form-item:nth-child(1) input").attr("checked", true);
+    $(".pref-com .form-item:nth-child(2) input").attr("checked", true);
   }
   else{
-    $(".pref-com .form-item:nth-child(1) input").attr("checked", false);
+    $(".pref-com .form-item:nth-child(1) input").attr("checked", true);
   }
 
   /* Para subida de cuota */
