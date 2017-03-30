@@ -122,7 +122,7 @@ jQuery(function($) {
     $(".revista .form-item:nth-child(1) input").attr("checked", true);
   }
   else{
-    $(".revista .form-item:nth-child(2) input").attr("checked", true);
+    $(".revista .form-item:nth-child(2) input").attr("checked", false);
   }
 
   // No llamar
