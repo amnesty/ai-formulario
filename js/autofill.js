@@ -135,10 +135,10 @@ jQuery(function($) {
 
   /* Para subida de cuota */
   if(!(urlVars['cuota']) && !(urlVars['donativo']) ){
-    $(".resultado .form-item:nth-child(2) input").attr("checked", true);
+    $(".resultado .form-item:nth-child(1) input").attr("checked", true);
   }
   else {
-    $(".resultado .form-item:nth-child(1) input").attr("checked", true);
+    $(".resultado .form-item:nth-child(2) input").attr("checked", true);
   }
 
   // pvkey
