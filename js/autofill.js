@@ -66,7 +66,7 @@ jQuery(function($) {
     $nacimiento = urlVars['nacimiento'].split("-");
     $(".capa-fechas .day").val($nacimiento[0]);
     $(".capa-fechas .month").val($nacimiento[1]);
-    $(".capa-fechas .year").val($nacimiento[2]); 
+    $(".capa-fechas .year").val($nacimiento[2]);
   }
 
   // Dirección
@@ -121,13 +121,16 @@ jQuery(function($) {
   if((urlVars['revista']) == 'si'){
     $(".revista .form-item:nth-child(1) input").attr("checked", true);
   }
-  else if((urlVars['revista']) == 'no'){
+  else{
     $(".revista .form-item:nth-child(2) input").attr("checked", true);
   }
 
   // No llamar
   if((urlVars['no-llam']) == 'si'){
     $(".pref-com .form-item:nth-child(1) input").attr("checked", true);
+  }
+  else{
+    $(".pref-com .form-item:nth-child(1) input").attr("checked", false);
   }
 
   /* Para subida de cuota */
