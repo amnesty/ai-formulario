@@ -118,11 +118,11 @@ jQuery(function($) {
   }
 
   // revista en papel
-  if((urlVars['revista']) == 'si'){
-    $(".revista .form-item:nth-child(1) input").attr("checked", true);
+  if((urlVars['revista']) == 'no'){
+    $(".revista .form-item:nth-child(2) input").attr("checked", false);
   }
   else{
-    $(".revista .form-item:nth-child(2) input").attr("checked", false);
+    $(".revista .form-item:nth-child(1) input").attr("checked", true);
   }
 
   // No llamar
