@@ -121,7 +121,7 @@ jQuery(function($) {
   if((urlVars['revista']) == 'no'){
     $(".revista .form-item:nth-child(2) input").attr("checked", true);
   }
-  else{
+  else if((urlVars['revista']) == 'si'){
     $(".revista .form-item:nth-child(1) input").attr("checked", true);
   }
 
