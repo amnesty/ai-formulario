@@ -129,9 +129,6 @@ jQuery(function($) {
   if((urlVars['no-llam']) == 'si'){
     $(".pref-com .form-item:nth-child(1) input").attr("checked", true);
   }
-  else{
-    $(".pref-com .form-item:nth-child(2) input").attr("checked", true);
-  }
 
   /* Para subida de cuota */
   if(!(urlVars['cuota']) && !(urlVars['donativo']) ){
