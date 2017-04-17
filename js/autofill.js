@@ -64,9 +64,9 @@ jQuery(function($) {
   }
   if((urlVars['nacimiento'])){
     $nacimiento = urlVars['nacimiento'].split("-");
-    $(".nacimiento .day").val($nacimiento[0]);
-    $(".nacimiento .month").val($nacimiento[1]);
-    $(".nacimiento .year").val($nacimiento[2]);
+    $(".capa-fechas .day").val($nacimiento[0]);
+    $(".capa-fechas .month").val($nacimiento[1]);
+    $(".capa-fechas .year").val($nacimiento[2]);
   }
 
   // Dirección
@@ -118,11 +118,11 @@ jQuery(function($) {
   }
 
   // revista en papel
-  if((urlVars['revista']) == 'si'){
-    $(".revista .form-item:nth-child(1) input").attr("checked", true);
-  }
-  else if((urlVars['revista']) == 'no'){
+  if((urlVars['revista']) == 'no'){
     $(".revista .form-item:nth-child(2) input").attr("checked", true);
+  }
+  else if((urlVars['revista']) == 'si'){
+    $(".revista .form-item:nth-child(1) input").attr("checked", true);
   }
 
   // No llamar
