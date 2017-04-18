@@ -71,8 +71,10 @@
 }
 
 /* Boton enviar */
-.form-actions input[type="submit"] {
-    background-color: #eb6400;
+.preview .webform-submit,
+.form-actions input[type="submit"],
+.preview .form-actions .form-submit {
+    background: #eb6400;
     color: #232323;
     font-family: "Lato";
     outline: 0;
@@ -82,7 +84,9 @@
     width: 100%;
 }
 
-.form-actions input[type="submit"]:hover{
+.webform-submit:hover,
+.form-actions input[type="submit"]:hover,
+.preview .form-actions .form-submit:hover{
     background: #ffffff;
     color: #eb6400;
     font-family: "Lato";
@@ -96,6 +100,10 @@
   	background: #fff;
   	border: 2px solid #000;
   	font-size: 23px;
+}
+
+.preview .form-actions .webform-previous:hover {
+    background: #fff;
 }
 
 /* Imagen bola de navidad */
