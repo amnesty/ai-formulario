@@ -40,7 +40,7 @@
 /* COLORES */
 
 .content-form .active {
-    background-color: #f69024;
+    background-color: #ffa366;
     /*border: 2px solid #eb6400;*/
     /*padding: 0px 18px 18px;*/
 }
@@ -74,7 +74,7 @@
 .preview .webform-submit,
 .form-actions input[type="submit"],
 .preview .form-actions .form-submit {
-    background: #eb6400;
+    background: #ffa366;
     color: #232323;
     font-family: "Lato";
     outline: 0;
@@ -88,9 +88,9 @@
 .form-actions input[type="submit"]:hover,
 .preview .form-actions .form-submit:hover{
     background: #ffffff;
-    color: #eb6400;
+    color: #ffa366;
     font-family: "Lato";
-    border: 2px solid #eb6400;
+    border: 2px solid #ffa366;
 }
 
 .preview .form-actions .webform-previous {
