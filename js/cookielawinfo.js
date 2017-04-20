@@ -30,7 +30,9 @@ jQuery(function($) {
 					var expires = "; expires="+date.toGMTString();
 			}
 			else var expires = "";
-			document.cookie = name+"="+value+expires+"; path=/";
+			var new_cookie = name+"="+value+"; domain=.es.amnesty.org"+expires+"; path=/";
+			console.log(new_cookie);
+			document.cookie = new_cookie;
 	}
 
 	function existeCookie(name) {
