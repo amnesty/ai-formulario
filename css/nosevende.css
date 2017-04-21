@@ -73,6 +73,7 @@
 /* Boton enviar */
 .preview .webform-submit,
 .form-actions input[type="submit"],
+.form-actions .form-submit,
 .preview .form-actions .form-submit {
     background: #ffa366;
     color: #232323;
@@ -85,6 +86,7 @@
 }
 
 .webform-submit:hover,
+.form-actions .form-submit:hover,
 .form-actions input[type="submit"]:hover,
 .preview .form-actions .form-submit:hover{
     background: #ffffff;
