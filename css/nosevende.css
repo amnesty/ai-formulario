@@ -11,7 +11,8 @@
 .box-form-es p,
 .box-form-es .field p,
 .box-form-es strong,
-.preview, .preview label {
+.preview, .preview label,
+#share-buttons .ai-accion-firma-compartir__header {
     font-family: 'Lato', sans-serif;
 }
 
