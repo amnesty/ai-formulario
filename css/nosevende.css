@@ -9,6 +9,8 @@
 .webform-conditional-processed .content-end-form .politica,
 .content-form .text-intro,
 .box-form-es p,
+.box-form-es .field p,
+.box-form-es strong,
 .preview, .preview label {
     font-family: 'Lato', sans-serif;
 }
