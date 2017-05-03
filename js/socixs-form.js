@@ -317,4 +317,9 @@ jQuery(function($) {
             });
     });
 
+    // Si no existe box-es-right, entonces box-form-es mide 100% de ancho
+    if( $(".box-es-right").length == 0 ){
+      $(".box-form-es").css("width", "100%");
+    }
+
 })
