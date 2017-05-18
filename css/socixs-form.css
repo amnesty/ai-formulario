@@ -71,6 +71,11 @@
         background-size: cover;
     }
 
+    .responsive--bg-mobile {
+        background-position: center 0%;
+        background-size: cover;
+    }
+
     .responsive--bg-c {
         background-position: center 50%;
         background-size: cover;
