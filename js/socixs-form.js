@@ -322,4 +322,12 @@ jQuery(function($) {
       $(".box-form-es").css("width", "100%");
     }
 
+    // Otra cantidad copiada en cantidad oculta
+    var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");
+    $(".otra_cuota").keyup(function(){
+      var otrac = $(".otra_cuota").val();
+      console.log(otrac);
+      cantidad.val(otrac);
+    });
+
 })
