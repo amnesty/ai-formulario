@@ -325,9 +325,9 @@ jQuery(function($) {
     });
 
     // Otra cantidad copiada en cantidad oculta
-    var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");
+    //var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");
     //var cantidad = $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-101h"); /* local */
-    $(".otra_cuota").keyup(function(){
+    /*$(".otra_cuota").keyup(function(){
       var otrac = $(".otra_cuota").val();
       //console.log(otrac);
       cantidad.val(otrac);
@@ -336,6 +336,6 @@ jQuery(function($) {
       var otrac = $(".otra_cuota").val();
       //console.log(otrac);
       cantidad.val(otrac);
-    });
+    });*/
 
 })
