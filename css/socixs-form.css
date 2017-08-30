@@ -101,6 +101,11 @@
         background-size: cover;
     }
 
+    .responsive--bg-regalo {
+        background-position: center 67%;
+        background-size: cover;
+    }
+
 
     /* content-colaborar  ----------------------------------------------------- */
 
