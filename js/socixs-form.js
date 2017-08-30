@@ -252,11 +252,6 @@ jQuery(function($) {
       }
     });
 
-    // Show or hide/erase "other quantity" field depending on which checkbox is checked
-    $(".cuota").click(function() {
-        $(".otra_cuota").val('');
-    });
-
     // Cuenta entera en rojo
     if($('.account').hasClass('error') || $('.dc').hasClass('error') ){
             $('.entity').css("border", "#f00 2px solid");
@@ -322,11 +317,24 @@ jQuery(function($) {
       $(".box-form-es").css("width", "100%");
     }
 
+    /* OTRA CANTIDAD */
+
+    // Show or hide/erase "other quantity" field depending on which checkbox is checked
+    $(".cuota").click(function() {
+        $(".otra_cuota").val('');
+    });
+
     // Otra cantidad copiada en cantidad oculta
     var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");
+    //var cantidad = $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-101h"); /* local */
     $(".otra_cuota").keyup(function(){
       var otrac = $(".otra_cuota").val();
-      console.log(otrac);
+      //console.log(otrac);
+      cantidad.val(otrac);
+    });
+    $(".otra_cuota").focusout(function(){
+      var otrac = $(".otra_cuota").val();
+      //console.log(otrac);
       cantidad.val(otrac);
     });
 
