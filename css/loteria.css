@@ -7,8 +7,8 @@
       font-style: normal;
 }
 @font-face {
-      font-family: 'ChronicleDisp-Semibold';
-      src: url('../font/ChronicleDisp-Black') format('embedded-opentype');
+      font-family: 'Archer-Semibold';
+      src: url('../font/Archer-Bold_0') format('embedded-opentype');
       font-weight: normal;
       font-style: normal;
 }
@@ -56,7 +56,7 @@
 /* COLORES */
 
 .content-form .active {
-  background-color: #cfa153;
+  background-color: #a98a54;
 }
 
 .content-form .webform-conditional-processed .border-radius-form,
@@ -76,20 +76,20 @@
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
-  border-color: #bfbfbf;
+  border-color: ;
   /*font-size: 19px;*/
 }
 
 .webform-conditional-processed .content-datos .document {
 	border-radius: 0px 0 0 0px;
-  border-color: #bfbfbf;
+  border-color: #eadec6;
 }
 
 /* Boton enviar */
 .form-submit, .webform-submit,
 .form-actions input[type="submit"],
 .preview .form-actions .form-submit {
-  background-color: #cfa153;
+  background-color: #a98a54;
   color: #111010;
   /*font-family: "ChronicleDisp-Black";*/
   font-family: "Times New Roman";
