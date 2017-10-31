@@ -23,7 +23,7 @@
 .content-form .text-intro,
 .box-form-es p,
 .preview, .preview label {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Archer', sans-serif;
 }
 
 .content-form .webform-conditional-processed .input-generic,
@@ -31,19 +31,19 @@
 .content-form .webform-conditional-processed .caja-content .capa-fechas div select,
 .webform-conditional-processed .content-datos .info-nif,
 .webform-conditional-processed .content-datos a {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Archer', sans-serif;
   font-size: 17px;
 }
 
 .content-form h2 {
-  /*font-family: 'Maven Pro', sans-serif;
+  /*font-family: 'Archer', sans-serif;
   font-weight: bold;*/
   color: #111010;
 }
 
 /* 3 cajas */
 .box-es-right .three-column p {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Archer', sans-serif;
   /*font-weight: bold;*/
   font-size: 16px;
 }
@@ -92,13 +92,13 @@
   background-color: #a98a54;
   color: #111010;
   /*font-family: "ChronicleDisp-Black";*/
-  font-family: "Times New Roman";
+  font-family: "Archer";
   font-weight: bold;
   font-style: italic;
 }
 
 .preview .form-actions .webform-previous {
-  font-family: "Times New Roman";
+  font-family: "Archer";
 	margin-left: 0%;
 	max-width: 350px;
 	background: #fff;
@@ -147,6 +147,10 @@
     visibility: hidden;
     float: none;
   }
+}
+
+.combo-margin{
+  margin-top: -13px
 }
 
 /* max-width: 769px */
