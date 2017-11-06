@@ -21,9 +21,12 @@ jQuery(function($) {
     var get_utm_source = getUrlVars()["utm_source"];
     var get_utm_content = getUrlVars()["utm_content"];
     var get_utm_term = getUrlVars()["utm_term"];
+    var get_suborigen = getUrlVars()["caso"];
 
     var source_input = $( "[name='submitted[civicrm_1_contact_1_contact_source]']");
     var source_input2 = $( "[name='submitted[civicrm_1_contact_1_cg17_custom_50]']");
+    var suborigen_input = $( "[name='submitted[civicrm_1_contribution_1_cg21_custom_109]']");
+
     // origen
     if( get_source != '' && get_source ){ // origen
         source_input.val(get_source);
@@ -68,6 +71,11 @@ jQuery(function($) {
     var source_input = $( "[name='submitted[civicrm_1_contact_1_cg17_custom_54]']");
     if( get_utm_term != '' && get_utm_term ){
         source_input.val(get_utm_term);
+    }
+
+    //subcanal
+    if( get_suborigen != '' && get_suborigen ){ //suborigen
+        suborigen_input.val(get_suborigen);
     }
 
     /*********** Página de confirmación ***********/
