@@ -153,6 +153,9 @@
   margin-top: -13px
 }
 
+. language_preference {
+  width: 33%;
+}
 /* max-width: 769px */
 @media only screen and (max-width: 769px) {
 
