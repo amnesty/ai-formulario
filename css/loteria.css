@@ -106,12 +106,12 @@
 	font-size: 23px;
 }
 
-/* Imagen bola de navidad */
-.bola-navidad {
-	margin-top: -27.357rem;
-	margin-left: 64.357rem;
-	position: relative;
-	float: left;
+/* Imagen estrella de navidad */
+.estrella-navidad {
+  margin-top: -41.357rem;
+  margin-left: 9.357rem;
+  position: relative;
+  float: left;
 }
 
 /* MEDIA QUERIES */
@@ -130,11 +130,11 @@
   	min-height: 464px;
   }
 
-  .bola-navidad {
-	  margin-top: -28.357rem;
-	  margin-left: 51.357rem;
-	  position: relative;
-	  float: left;
+  .estrella-navidad {
+    margin-top: -41.357rem;
+    margin-left: 9.357rem;
+    position: relative;
+    float: left;
   }
 }
 
@@ -143,10 +143,10 @@
   	min-height: 100%;
   }
 
-  .bola-navidad {
+  /*.bola-navidad {
     visibility: hidden;
     float: none;
-  }
+  }*/
 }
 
 .combo-margin{
