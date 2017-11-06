@@ -25,7 +25,7 @@ jQuery(function($) {
 
     var source_input = $( "[name='submitted[civicrm_1_contact_1_contact_source]']");
     var source_input2 = $( "[name='submitted[civicrm_1_contact_1_cg17_custom_50]']");
-    var suborigen_input = $( "[name='submitted[civicrm_1_contribution_1_cg21_custom_109]']");
+    var suborigen_input = $( "[name='submitted[civicrm_1_contact_1_cg17_custom_110]']");
 
     // origen
     if( get_source != '' && get_source ){ // origen
