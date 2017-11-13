@@ -81,8 +81,8 @@
 }
 
 .webform-conditional-processed .content-datos .document {
-	border-radius: 0px 0 0 0px;
-  border-color: #eadec6;
+	border-radius: 2px 0 0 0px;
+  border-color: #000;
 }
 
 /* Boton enviar */
@@ -113,6 +113,26 @@
   position: relative;
   float: left;
 }
+
+/* Preview */
+.preview .content-direccion {
+	float: left;
+	margin-right: 200px;
+	margin-left: 500px;
+	margin-top: -460px;
+}
+
+.preview .content-colaborar {
+	border: 0px;
+	max-width: 450px;
+}
+
+.preview .content-cuenta {
+	float: left;
+	margin-left: 1000px;
+	margin-top: -530px;
+}
+
 
 /* MEDIA QUERIES */
 
