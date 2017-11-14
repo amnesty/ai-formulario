@@ -106,14 +106,6 @@
 	font-size: 19px;
 }
 
-/* Imagen estrella de navidad */
-.estrella-navidad {
-  margin-top: -41.357rem;
-  margin-left: 9.357rem;
-  position: relative;
-  float: left;
-}
-
 /* Preview */
 .preview .content-direccion {
 	float: left;
@@ -133,9 +125,26 @@
 	margin-top: -530px;
 }
 
+/* ??? */
+.combo-margin{
+  margin-top: -13px
+}
+
+.language_preference {
+  width: 33%;
+}
+
+/* Imagen estrella de navidad */
+.estrella-navidad {
+  margin-top: -37.857rem;
+  margin-left: 9.357rem;
+  position: relative;
+  float: left;
+}
 
 /* MEDIA QUERIES */
 
+/* max-width: 1370px */
 @media only screen and (max-width: 1370px) {
 
   .content-form .webform-conditional-processed .input-generic,
@@ -151,33 +160,51 @@
   }
 
   .estrella-navidad {
-    margin-top: -41.357rem;
-    margin-left: 9.357rem;
-    position: relative;
-    float: left;
+  	margin-top: -32.857rem;
+  	margin-left: -4.643rem;
+  	position: relative;
+  	float: left;
   }
 }
 
+@media only screen and (max-width: 1039px) {
+
+  .estrella-navidad {
+    margin-top: -27.357rem;
+    margin-left: 4.357rem;
+    position: relative;
+    float: left;
+  }
+
+}
+
+/* max-width: 986px */
 @media only screen and (max-width: 986px) {
+
   .box-es-right .three-column {
   	min-height: 100%;
   }
 
-  /*.bola-navidad {
-    visibility: hidden;
-    float: none;
-  }*/
+  .estrella-navidad {
+  	margin-top: -22.357rem;
+  	margin-left: 1.357rem;
+  	position: relative;
+  	float: left;
+  	width: 250px;
+  }
+
 }
 
-.combo-margin{
-  margin-top: -13px
-}
-
-.language_preference {
-  width: 33%;
-}
 /* max-width: 769px */
 @media only screen and (max-width: 769px) {
+
+  .estrella-navidad {
+  	margin-top: -27.357rem;
+  	margin-left: 2.357rem;
+  	position: relative;
+  	float: left;
+  	width: 250px;
+  }
 
   /* colaborar */
   .webform-conditional-processed .caja-checkbox {
@@ -218,4 +245,40 @@
   .image-header__content--medium {
     padding-top: 50%;
   }
+}
+
+@media only screen and (max-width: 665px) {
+
+  .estrella-navidad {
+  	margin-top: -23.357rem;
+  	margin-left: 2.357rem;
+  	position: relative;
+  	float: left;
+  	width: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 534px) {
+
+  .estrella-navidad {
+  	margin-top: -19.357rem;
+  	margin-left: 2.357rem;
+  	position: relative;
+  	float: left;
+  	width: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .estrella-navidad {
+  	margin-top: -22.357rem;
+  	margin-left: 2.357rem;
+  	position: relative;
+  	float: left;
+  	width: 200px;
+  }
+
 }
