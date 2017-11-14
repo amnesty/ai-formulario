@@ -199,8 +199,8 @@
 @media only screen and (max-width: 769px) {
 
   .estrella-navidad {
-  	margin-top: -27.357rem;
-  	margin-left: 2.357rem;
+  	margin-top: -25.357rem;
+  	margin-left: 1.357rem;
   	position: relative;
   	float: left;
   	width: 250px;
@@ -250,11 +250,11 @@
 @media only screen and (max-width: 665px) {
 
   .estrella-navidad {
-  	margin-top: -23.357rem;
-  	margin-left: 2.357rem;
+  	margin-top: -25.357rem;
+  	margin-left: 1.357rem;
   	position: relative;
   	float: left;
-  	width: 200px;
+  	width: 250px;
   }
 
 }
