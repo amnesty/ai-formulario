@@ -11,7 +11,7 @@ jQuery(function($) {
 
     // ************** Origenes ****************
 
-  /*  var url = window.location.pathname;
+    var url = window.location.pathname;
     var cat_source = "ut01";
     var get_source = getUrlVars()["origen"];
     var get_campaign = getUrlVars()["pk_campaign"];
@@ -37,9 +37,9 @@ jQuery(function($) {
           contrib_source_input.val(get_source);
         }
     }
-    else if(url.indexOf("/cat") > -1){ // AmnistiaCAT
+    /*else if(url.indexOf("/cat") > -1){ // AmnistiaCAT
         source_input.val(cat_source);
-    }
+    }*/
     else if( get_campaign != '' && get_campaign ){ //pk_campaign
         source_input.val(get_campaign);
     }
@@ -124,11 +124,11 @@ jQuery(function($) {
         $(".box-es-right").remove();
         $(".box-form-es").css("width", "100%");
 
-    }
+    }*/
 
     // Scrolling the active block of fields
 
-    if( $('.webform-client-form').hasClass('webform-conditional-processed') ){
+    /*if( $('.webform-client-form').hasClass('webform-conditional-processed') ){
 
         $(".content-colaborar").hover( function(){
             $(".caja-content").removeClass('active');
@@ -197,7 +197,7 @@ jQuery(function($) {
             return t.length > ($(".profesion").width()/11) ? t.substr(0,25) + "..." : t;
         }
       );
-    });
+    });*/
 
     // Sort the countries
     $( document ).ready(function() {
@@ -213,14 +213,14 @@ jQuery(function($) {
     });
 
     // Province label
-    $('.provincia option[value=""]').text("-Provincia-");
+    //$('.provincia option[value=""]').text("-Provincia-");
 
     // Etiquetas de fecha de nacimiento
-    if(url.indexOf("/cat") > -1){ // AmnistiaCAT
+  /*  if(url.indexOf("/cat") > -1){ // AmnistiaCAT
       $('.day option[value=""]').text("Dia");
       $('.month option[value=""]').text("Mes");
       $('.year option[value=""]').text("Any");
-    }
+    }*/
 
     // Make the IBAN fields to automatically move the cursor through when any field is fullfilled.
 
@@ -268,14 +268,14 @@ jQuery(function($) {
             $('.account').not(".first").css("border", "#f00 2px solid");
     }
 
-    $('a.popup').colorbox({iframe:true, width:"50%", height:"50%"});
+  /*  $('a.popup').colorbox({iframe:true, width:"50%", height:"50%"});
     $('a.popup_little').colorbox({iframe:true, width:"50%", height:"20%", "scrolling":false});
 
     // popups colorbox
     function refresh_popups(){
         var y = $('.cboxIframe html').height();
         $('a.popup_little').resize({ width:"50%", height:y });
-    }
+    }*/
 
     // 0 del DNI
     $('.number-dni').first().focusout(function(){
@@ -287,7 +287,7 @@ jQuery(function($) {
 
     // Redes sociales
 
-    function share(title, summary, url, image) {
+/*    function share(title, summary, url, image) {
         //var sharer="https://www.facebook.com/sharer/sharer.php?u=example.org";
         window.open(
             'https://www.facebook.com/sharer.php?u=' + encodeURIComponent(url)
@@ -323,7 +323,9 @@ jQuery(function($) {
     // Si no existe box-es-right, entonces box-form-es mide 100% de ancho
     if( $(".box-es-right").length == 0 ){
       $(".box-form-es").css("width", "100%");
-    }
+    }*/
+    /* Ocultar icono calendario*/
+    $(".webform-calendar").hide();
 
     /* OTRA CANTIDAD */
 
