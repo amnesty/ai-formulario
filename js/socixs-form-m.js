@@ -334,6 +334,7 @@ jQuery(function($) {
     $('.office').attr('type', 'number');
     $('.dc').attr('type', 'number');
     $('.ncuenta').attr('type', 'number');
+    $('.cp').attr('type', 'number');    
 
     /* OTRA CANTIDAD */
 
