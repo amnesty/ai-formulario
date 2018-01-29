@@ -327,6 +327,14 @@ jQuery(function($) {
     /* Ocultar icono calendario*/
     $(".webform-calendar").hide();
 
+    /* Formato type number para los campos numéricos*/
+    $('.telefono').attr('type', 'number');
+    $('.country').attr('type', 'number');
+    $('.entity').attr('type', 'number');
+    $('.office').attr('type', 'number');
+    $('.dc').attr('type', 'number');
+    $('.ncuenta').attr('type', 'number');
+
     /* OTRA CANTIDAD */
 
     // Show or hide/erase "other quantity" field depending on which checkbox is checked
