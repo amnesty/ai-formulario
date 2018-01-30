@@ -354,7 +354,7 @@ jQuery(function($) {
       $(".cuota").val('');
       $('.otra_cuota').val($('.otra_cantidad').val());
       $('.otra_cantidad').val($('.otra_cantidad').val()+'€');
-    }}
+    }});
     // Otra cantidad copiada en cantidad oculta
     //var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");
     //var cantidad = $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-101h"); /* local */
