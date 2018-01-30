@@ -334,18 +334,27 @@ jQuery(function($) {
     $('.office').attr('type', 'number');
     $('.dc').attr('type', 'number');
     $('.ncuenta').attr('type', 'number');
-    $('.cp').attr('type', 'number');    
+    $('.cp').attr('type', 'number');
 
     /* OTRA CANTIDAD */
 
     // Show or hide/erase "other quantity" field depending on which checkbox is checked
     $(".cuota").hide();
-    $("#selectButton-edit-submitted-listadocantidades").click(function() {
+    $("#selectButton-edit-submitted-listadocantidades").click(function(){
         $(".otra_cuota").val('');
+        $(".otra_cantidad").val('');
     });
     $(".otra_cuota").blur(function(){
         $(".cuota").val('');
     });
+
+    //Marcar € en caja Otra cantidad
+    $(".otra_cantidad").blur(function(){
+    if ($('.otra_cantidad').val() != '') {
+      $(".cuota").val('');
+      $('.otra_cuota').val($('.otra_cantidad').val());
+      $('.otra_cantidad').val($('.otra_cantidad').val()+'€');
+    }}
     // Otra cantidad copiada en cantidad oculta
     //var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");
     //var cantidad = $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-101h"); /* local */
