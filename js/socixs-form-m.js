@@ -324,10 +324,9 @@ jQuery(function($) {
     if( $(".box-es-right").length == 0 ){
       $(".box-form-es").css("width", "100%");
     }*/
-    /* Ocultar icono calendario*/
-    $(".webform-calendar").hide();
 
     /* Formato type number para los campos numéricos*/
+    $('.otra_cantidad').attr('type', 'number');
     $('.telefono').attr('type', 'number');
     $('.country').attr('type', 'number');
     $('.entity').attr('type', 'number');
