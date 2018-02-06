@@ -339,18 +339,18 @@ jQuery(function($) {
 
     // Show or hide/erase "other quantity" field depending on which checkbox is checked
     $(".cuota").hide();
-    $("#selectButton-edit-submitted-listadocantidades").click(function(){
+    $("#payamount-edit-submitted-listadocantidades").click(function(){
         $(".otra_cuota").val('');
         $(".otra_cantidad").val('');
     });
     $(".otra_cuota").blur(function(){
-        $(".cuota").val('');
+        $(".cuota").val(0);
     });
 
     //Marcar € en caja Otra cantidad
     $(".otra_cantidad").blur(function(){
     if ($('.otra_cantidad').val() != '') {
-      $(".cuota").val('');
+      $(".cuota").val(0);
       $('.otra_cuota').val($('.otra_cantidad').val());
       $('.otra_cantidad').val($('.otra_cantidad').val()+'€');
     }});
