@@ -326,7 +326,6 @@ jQuery(function($) {
     }*/
 
     /* Formato type number para los campos numéricos*/
-    $('.otra_cantidad').attr('type', 'number');
     $('.telefono').attr('type', 'number');
     $('.country').attr('type', 'number');
     $('.entity').attr('type', 'number');
@@ -352,6 +351,7 @@ jQuery(function($) {
     if ($('.otra_cantidad').val() != '') {
       $(".cuota").val(0);
       $('.otra_cuota').val($('.otra_cantidad').val());
+      $('.otra_cantidad').attr('type', 'text'); // Type Texto para poder insertar €
       $('.otra_cantidad').val($('.otra_cantidad').val()+'€');
     }});
     // Otra cantidad copiada en cantidad oculta
