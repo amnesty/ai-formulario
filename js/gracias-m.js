@@ -35,9 +35,4 @@ jQuery(function($) {
   }
 
   $('.heading--tape--dark').hide();
-  var cd1 = Array("cid1");
-  $('.form-actions').show();
-  if (cd1 == null){
-    $('.form-actions').hide();
-  }
 })
