@@ -1,5 +1,10 @@
 /* CSS específico del formulario de socixs ------------------- */
 
+    /* Avoid padding in CiviCRM core style */
+    body:not(.toolbar) {
+    	padding-top: 0px !important;
+    }
+
     .content-form .text-intro {
         font-family: TradeGothicLT-BoldCondTwenty, HelveticaNeue-CondensedBold, "Franklin Gothic Medium", sans-serif;
         font-size: 19px;
