@@ -131,7 +131,7 @@ jQuery(function($) {
   }
 
   /* Para subida de cuota */
-  if(!(urlVars['cuota']) && !(urlVars['donativo']) ){
+  if(urlVars['resultado'] != 'POSITIVO' ){
     $(".resultado .form-item:nth-child(2) input").attr("checked", true);
   }
   else {
