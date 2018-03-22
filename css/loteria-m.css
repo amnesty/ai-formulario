@@ -473,13 +473,13 @@
 }
 
 .webform-progressbar.mobile li.current {
-    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/current.png) no-repeat center;
+    background: url(/sites/all/themes/ai-theme-civicrm/ai-formulario/images/current_justicia.png) no-repeat center;
     font-weight: bold;
     color: #000000;
 }
 
 .webform-progressbar.mobile li.previous {
-    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/previous.png) no-repeat center;
+    background: url(/sites/all/themes/ai-theme-civicrm/ai-formulario/images/previous_justicia.png) no-repeat center;
     font-weight: bold;
     color: #000000;
 }
