@@ -530,8 +530,8 @@
   font-style: italic;*/
 }
 .provincia{
-  background-color:#eadec6;
+  background-color:#eadec6 !important;
 }
-.webform-submit:hover {
-  background: #eadec6;
+.form-submit:hover, .webform-submit:hover{
+  background: #eadec6 !important;
 }
