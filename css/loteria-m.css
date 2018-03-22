@@ -153,7 +153,7 @@
 }
 
 .node-type-webform .content-form .amnistia_form_mobile select {
-    background: url(./images/arrow-select.png) no-repeat right 10px center;
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/arrow-select.png) no-repeat right 10px center;
 }
 
 .node-type-webform .content-form .amnistia_form_mobile input:focus {
@@ -188,7 +188,7 @@
 
 .node-type-webform .content-form .amnistia_form_mobile input[type="checkbox"]:checked:after,
 .node-type-webform .content-form .amnistia_form_mobile input[type="radio"]:checked:after {
-    background: url(./images/ico-check.png) center no-repeat #eadec6;
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/ico-check.png) center no-repeat #eadec6;
     content: "";
     font-size: 24px;
     height: 13px;
@@ -468,25 +468,25 @@
     line-height: 25px;
     font-size: 1.5em;
     color: #778899;
-    background: url(images/next.png) no-repeat center;
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/next.png) no-repeat center;
     width: 100%;
 }
 
 .webform-progressbar.mobile li.current {
-    background: url(images/current.png) no-repeat center;
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/current.png) no-repeat center;
     font-weight: bold;
     color: #000000;
 }
 
 .webform-progressbar.mobile li.previous {
-    background: url(images/previous.png) no-repeat center;
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/previous.png) no-repeat center;
     font-weight: bold;
     color: #000000;
 }
 
 .webform-progressbar.mobile li.line {
     width:100%;
-    background: url(images/linegray.png) no-repeat center;
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/linegray.png) no-repeat center;
 }
 
 .webform-progressbar.mobile ul.list-progressbar {
@@ -524,8 +524,12 @@
 .preview .form-actions .form-submit {
   background-color: #a98a54;
   color: #111010;
-  /*font-family: "ChronicleDisp-Black";*/
+  /*font-family: "ChronicleDisp-Black";
   font-family: "Archer";
   font-weight: bold;
-  font-style: italic;
+  font-style: italic;*/
+}
+
+.provincia{
+  background-color:#eadec6;
 }
