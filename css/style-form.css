@@ -289,3 +289,8 @@ div.error {
 input.error, select.error, /*div.error*/ {
     border: 2px #f00 solid;
 }
+
+.check-politica,.check{
+    display: none;
+    width: 0%;
+}
