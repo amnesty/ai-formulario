@@ -290,7 +290,7 @@ input.error, select.error, /*div.error*/ {
     border: 2px #f00 solid;
 }
 
-.check-politica,.check{
+.content-end-form .check-politica, .content-end-form .check{
     display: none;
     width: 0%;
 }
