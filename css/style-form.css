@@ -294,3 +294,10 @@ input.error, select.error, /*div.error*/ {
     display: none;
     width: 0%;
 }
+
+/* Click to Call */
+.clicktocall_btn {
+  float: right;
+  width: 200px;
+  margin-top: 14px;
+}
