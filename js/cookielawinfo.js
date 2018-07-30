@@ -217,6 +217,12 @@ function cli_show_cookiebar(p) {
 		accept_close();
 	});
 
+	/* helena - cerrar cookie al hacer scroll */
+	jQuery(window).scroll(function(e){
+		e.preventDefault();
+		accept_close();
+	});
+
 	jQuery("#close_cookie").click(function(e) {
 		e.preventDefault();
 		//Cookie.set(ACCEPT_COOKIE_NAME, '1', ACCEPT_COOKIE_EXPIRE);
