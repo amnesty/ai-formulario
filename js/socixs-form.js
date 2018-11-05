@@ -63,7 +63,7 @@ jQuery(function($) {
     if( get_utm_source != '' && get_utm_source ){
         source_input.val(get_utm_source);
     }
-    // utm-content
+    // pk-content y utm-content
     var source_input = $( "[name='submitted[civicrm_1_contact_1_cg17_custom_53]']");
     if( get_content != '' && get_content ){
         source_input.val(get_content);

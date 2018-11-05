@@ -19,6 +19,7 @@ jQuery(function($) {
     var get_kwd = getUrlVars()["pk_kwd"];
     var get_utm_medium = getUrlVars()["utm_medium"];
     var get_utm_source = getUrlVars()["utm_source"];
+    var get_content = getUrlVars()["pk_content"];
     var get_utm_content = getUrlVars()["utm_content"];
     var get_utm_term = getUrlVars()["utm_term"];
     var get_suborigen = getUrlVars()["caso"];
@@ -62,9 +63,12 @@ jQuery(function($) {
     if( get_utm_source != '' && get_utm_source ){
         source_input.val(get_utm_source);
     }
-    // utm-content
+    // pk-content y utm-content
     var source_input = $( "[name='submitted[civicrm_1_contact_1_cg17_custom_53]']");
-    if( get_utm_content != '' && get_utm_content ){
+    if( get_content != '' && get_content ){
+        source_input.val(get_content);
+    }
+    else if( get_utm_content != '' && get_utm_content ){
         source_input.val(get_utm_content);
     }
     // utm-term
