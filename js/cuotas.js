@@ -2,6 +2,7 @@
 
 jQuery(function($) {
 
+  //Aniadimos un class específico para cantidad (previamente se han añadido todas las cantidades en los formularios)
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-1").addClass("cuota-1");
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-2").addClass("cuota-2");
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-3").addClass("cuota-3");
@@ -34,6 +35,7 @@ jQuery(function($) {
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-14]").addClass("cuota-14");
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-15]").addClass("cuota-15");
 
+  // Por defecto mostramos solo las cuotas mensuales
   $('.cuota-1').show();
   $('.cuota-2').show();
   $('.cuota-3').show();
