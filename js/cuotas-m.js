@@ -1,88 +1,69 @@
-  /* JS especifico para la ponderación de las cantidades de las cuotas en función de la periodicidad*/
+/* JS especifico para la ponderación de las cantidades de las cuotas en función de la periodicidad*/
 
 jQuery(function($) {
-$(".frecuencia").change( function() {
-  //alert('test');
+
+  var class_id = 1;
+  $(".payamount-slide").each(function(){
+    $(this).addClass("cuota-"+class_id);
+    class_id++;
+  });
+
+  // Por defecto mostramos solo las cuotas mensuales
+  $('.cuota-1').show();
+  $('.cuota-2').show();
+  $('.cuota-3').show();
+  $('.cuota-4').hide();
+  $('.cuota-5').hide();
+  $('.cuota-6').hide();
+  $('.cuota-7').hide();
+  $('.cuota-8').hide();
+  $('.cuota-9').hide();
+
+
+  $(".frecuencia").change( function() {
+
     switch($('input[type="button"] .selectButton-input, .value-selected').attr('id')){
       case '12': //Mensual
-        //Value
-        jQuery(function($) {
-          var num_nodos = $(".payamount-slide").toArray().length;
-          num_nodos--;
-          $(".payamount-slide").each(function(){
 
-                if (num_nodos == 3){
-                  $(this).find(".payamount-input").attr('id', 9);
-                  $(this).find(".payamount-input").attr('name', 9);
-                  $(this).find(".payamount-input").val('9 €');
-                }else if (num_nodos == 2){
-                  $(this).find(".payamount-input").attr('id', 12);
-                  $(this).find(".payamount-input").attr('name', 12);
-                  $(this).find(".payamount-input").val('12 €');
-                }else if (num_nodos == 1){
-                  $(this).find(".payamount-input").attr('id', 25);
-                  $(this).find(".payamount-input").attr('name', 25);
-                  $(this).find(".payamount-input").val('25 €');
-                }
+      $('.cuota-1').show();
+      $('.cuota-2').show();
+      $('.cuota-3').show();
+      $('.cuota-4').hide();
+      $('.cuota-5').hide();
+      $('.cuota-6').hide();
+      $('.cuota-7').hide();
+      $('.cuota-8').hide();
+      $('.cuota-9').hide();
 
-                num_nodos--;
-          });
-        });
-
-        break;
+      break;
 
       case '4': //Trimestral
-        //Value
-        jQuery(function($) {
-          var num_nodos = $(".payamount-slide").toArray().length;
-          num_nodos--;
-          $(".payamount-slide").each(function(){
 
-                if (num_nodos == 3){
-                  $(this).find(".payamount-input").attr('id', 20);
-                  $(this).find(".payamount-input").attr('name', 20);
-                  $(this).find(".payamount-input").val('20 €');
-                }else if (num_nodos == 2){
-                  $(this).find(".payamount-input").attr('id', 36);
-                  $(this).find(".payamount-input").attr('name', 36);
-                  $(this).find(".payamount-input").val('36 €');
-                }else if (num_nodos == 1){
-                  $(this).find(".payamount-input").attr('id', 50);
-                  $(this).find(".payamount-input").attr('name', 50);
-                  $(this).find(".payamount-input").val('50 €');
-                }
+      $('.cuota-1').hide();
+      $('.cuota-2').hide();
+      $('.cuota-3').hide();
+      $('.cuota-4').show();
+      $('.cuota-5').show();
+      $('.cuota-6').show();
+      $('.cuota-7').hide();
+      $('.cuota-8').hide();
+      $('.cuota-9').hide();
 
-                num_nodos--;
-          });
-        });
-
-        break;
+      break;
 
       case '1': //Anual
-        //Value
-        jQuery(function($) {
-          var num_nodos = $(".payamount-slide").toArray().length;
-          num_nodos--;
-          $(".payamount-slide").each(function(){
 
-                if (num_nodos == 3){
-                  $(this).find(".payamount-input").attr('id', 70);
-                  $(this).find(".payamount-input").attr('name', 70);
-                  $(this).find(".payamount-input").val('70 €');
-                }else if (num_nodos == 2){
-                  $(this).find(".payamount-input").attr('id', 100);
-                  $(this).find(".payamount-input").attr('name', 100);
-                  $(this).find(".payamount-input").val('100 €');
-                }else if (num_nodos == 1){
-                  $(this).find(".payamount-input").attr('id', 120);
-                  $(this).find(".payamount-input").attr('name', 120);
-                  $(this).find(".payamount-input").val('120 €');
-                }
+      $('.cuota-1').hide();
+      $('.cuota-2').hide();
+      $('.cuota-3').hide();
+      $('.cuota-4').hide();
+      $('.cuota-5').hide();
+      $('.cuota-6').hide();
+      $('.cuota-7').show();
+      $('.cuota-8').show();
+      $('.cuota-9').show();
 
-                num_nodos--;
-          });
-        });
-        break;
+      break;
     }
-});
+  });
 });
