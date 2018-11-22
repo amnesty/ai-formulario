@@ -35,6 +35,9 @@ jQuery(function($) {
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-14]").addClass("cuota-14");
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-15]").addClass("cuota-15");
 
+  //Por defecto marcamos 12€
+  $(".cuota-2").prop("checked",true);
+
   // Por defecto mostramos solo las cuotas mensuales
   $('.cuota-1').show();
   $('.cuota-2').show();
@@ -57,6 +60,9 @@ jQuery(function($) {
     switch($(".frecuencia").val()){
       case '12': //Mensual
 
+      //Valor por defecto
+      $(".cuota-2").prop("checked",true);
+
       $('.cuota-1').show();
       $('.cuota-2').show();
       $('.cuota-3').show();
@@ -76,6 +82,9 @@ jQuery(function($) {
       break;
 
       case '6': //Bimestral
+
+      //Valor por defecto
+      $(".cuota-5").prop("checked",true);
 
       $('.cuota-1').hide();
       $('.cuota-2').hide();
@@ -97,6 +106,9 @@ jQuery(function($) {
 
       case '4': //Trimestral
 
+      //Valor por defecto
+      $(".cuota-8").prop("checked",true);
+
       $('.cuota-1').hide();
       $('.cuota-2').hide();
       $('.cuota-3').hide();
@@ -117,6 +129,10 @@ jQuery(function($) {
 
       case '2': //Semestral
 
+      //Valor por defecto
+      $(".cuota-11").prop("checked",true);
+
+
       $('.cuota-1').hide();
       $('.cuota-2').hide();
       $('.cuota-3').hide();
@@ -136,6 +152,10 @@ jQuery(function($) {
       break;
 
       case '1': //Anual
+
+      //Valor por defecto
+      $(".cuota-14").prop("checked",true);
+
       $('.cuota-1').hide();
       $('.cuota-2').hide();
       $('.cuota-3').hide();
