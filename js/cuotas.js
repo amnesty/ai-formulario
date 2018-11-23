@@ -2,8 +2,15 @@
 
 jQuery(function($) {
 
+  var class_id = 1;
+  $(".form-item form-type-radio form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48").each(function(){
+    $(this).find("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-"+class_id).addClass("cuota-"+class_id);
+    $(this).find("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-"+class_id+"]").addClass("cuota-"+class_id);
+    class_id++;
+  });
+
   //Aniadimos un class específico para cantidad (previamente se han añadido todas las cantidades en los formularios)
-  $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-1").addClass("cuota-1");
+  /*$("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-1").addClass("cuota-1");
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-2").addClass("cuota-2");
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-3").addClass("cuota-3");
   $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-4").addClass("cuota-4");
@@ -33,7 +40,7 @@ jQuery(function($) {
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-12]").addClass("cuota-12");
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-13]").addClass("cuota-13");
   $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-14]").addClass("cuota-14");
-  $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-15]").addClass("cuota-15");
+  $("label[for=edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-15]").addClass("cuota-15");*/
 
   //Por defecto marcamos 12€
   $(".cuota-2").prop("checked",true);
