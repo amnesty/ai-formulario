@@ -8,6 +8,9 @@ jQuery(function($) {
     class_id++;
   });
 
+  //Cantidad por defecto
+  $('.cuota-2').find('.payamount-input').addClass("value-selected");
+
   // Por defecto mostramos solo las cuotas mensuales
   $('.cuota-1').show();
   $('.cuota-2').show();
@@ -25,6 +28,9 @@ jQuery(function($) {
     switch($('input[type="button"] .selectButton-input, .value-selected').attr('id')){
       case '12': //Mensual
 
+      //Cantidad por defecto
+      $('.cuota-2').find('.payamount-input').addClass("value-selected");
+
       $('.cuota-1').show();
       $('.cuota-2').show();
       $('.cuota-3').show();
@@ -39,6 +45,8 @@ jQuery(function($) {
 
       case '4': //Trimestral
 
+      $('.cuota-5').find('.payamount-input').addClass("value-selected");
+
       $('.cuota-1').hide();
       $('.cuota-2').hide();
       $('.cuota-3').hide();
@@ -52,6 +60,9 @@ jQuery(function($) {
       break;
 
       case '1': //Anual
+
+      //Cantidad por defecto
+      $('.cuota-8').find('.payamount-input').addClass("value-selected");
 
       $('.cuota-1').hide();
       $('.cuota-2').hide();
