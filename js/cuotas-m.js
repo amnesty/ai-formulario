@@ -64,7 +64,7 @@ jQuery(function($) {
   $(".frecuencia").change( function() {
 
     // Escondemos otra cuota  por si acaso ya que va a cambiar al valor del medio
-    //$('.otra_cantidad').hide();
+    $('.otra_cantidad').parent().css("display", "none");
     // Desmarcamos "otra"
     $('.cuota-10').find('.payamount-input').removeClass('value-selected');
 
