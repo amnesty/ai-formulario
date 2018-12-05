@@ -165,7 +165,7 @@
         height: 50px;
         margin-right: 10px;
         line-height: 50px;
-        margin-left: 20px;
+        margin-left: -130px;
     }
 
     .webform-conditional-processed .content-colaborar .other-quant {
@@ -901,9 +901,9 @@
 
     /* cuota */
 
-    .webform-conditional-processed .content-colaborar .capa-other-quant {
+    /*.webform-conditional-processed .content-colaborar .capa-other-quant {
         margin-left: -16px;
-    }
+    }*/
 
     .webform-conditional-processed .content-colaborar .capa-selecttime {
         width: 275px;
@@ -1156,9 +1156,9 @@
         margin-left: 35px;
     }
 
-    .webform-conditional-processed .content-colaborar .capa-other-quant {
+    /*.webform-conditional-processed .content-colaborar .capa-other-quant {
         margin-left: -20px;
-    }
+    }*/
 
     .webform-conditional-processed .content-colaborar .capa-other-quant {
         margin-top: 20px;
