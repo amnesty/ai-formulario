@@ -15,7 +15,7 @@ jQuery(function($) {
 
 
   //Por defecto marcamos 12€
-  $(".cuota-2").prop("checked",true);
+  /*$(".cuota-2").prop("checked",true);*/
 
   // Por defecto mostramos solo las cuotas mensuales
   $('.cuota-1').show();

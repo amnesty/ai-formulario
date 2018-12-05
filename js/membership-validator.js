@@ -20,18 +20,20 @@ jQuery(function($) {
   // on-load
   calculate_fee();
 
+  // si hay un evento click en cualquier cuota menos "otra cantidad" y su caja correspondiente
   $(".cuota").click(function() {
     if( $(this).attr("id") != "edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48-4"
-      && $(this).attr("id") != "edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48" ){
+      && $(this).attr("id") != "edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48"
+      && $(this).attr("id") != "edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-49"){
       calculate_fee();
       //console.log( $(this).attr("id") );
     }
   });
-
+  // si otra cuota se rellenar
   $(".otra_cuota").focusout(function(){
     calculate_fee();
   });
-
+  // si la periodicidad cambia
   $(".frecuencia").change(function(){
     calculate_fee();
   });
