@@ -1,0 +1,19 @@
+.webform-conditional-processed .content-colaborar .capa-other-quant {
+    margin-left: -130px;
+}
+
+@media only screen and (max-width: 986px) {
+
+  .webform-conditional-processed .content-colaborar .capa-other-quant {
+      margin-left: -130px;
+  }
+
+}
+
+@media only screen and (max-width: 769px) {
+
+  .webform-conditional-processed .content-colaborar .capa-other-quant {
+      margin-left: -130px;
+  }
+
+}
