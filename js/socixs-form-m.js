@@ -356,7 +356,7 @@ jQuery(function($) {
       $(".cuota").val(0);
       $('.otra_cuota').val($('.otra_cantidad').val());
       $('.otra_cantidad').attr('type', 'text'); // Type Texto para poder insertar €
-      if ($('.otra_cantidad').val().indexOf("€") <> -1){ // Si ya tiene el €, no lo pintamos
+      if ($('.otra_cantidad').val().indexOf("€") != -1){ // Si ya tiene el €, no lo pintamos
         $('.otra_cantidad').val($('.otra_cantidad').val()+'€');
       }
     }});
