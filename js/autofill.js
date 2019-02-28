@@ -4,33 +4,33 @@
 
 /* Funcion que decodifica caracteres de la URL */
 function decode_url(url){
-   url = str.replace("Microsoft", "W3Schools");
-   url = str.replace('%D1','Ñ');
-   url = str.replace('%F1','ñ');
-   url = str.replace('%BA','º');
-   url = str.replace('%AA','ª');
-   url = str.replace('%C1','Á');
-   url = str.replace('%E1','á');
-   url = str.replace('%C9','É');
-   url = str.replace('%E9','é');
-   url = str.replace('%CD','Í');
-   url = str.replace('%ED','í');
-   url = str.replace('%D3','Ó');
-   url = str.replace('%F3','ó');
-   url = str.replace('%DA','Ú');
-   url = str.replace('%FA','ú');
-   url = str.replace('%D2','Ò');
-   url = str.replace('%F2','ò');
-   url = str.replace('%C8','È');
-   url = str.replace('%E8','è');
-   url = str.replace('%C0','À');
-   url = str.replace('%E0','à');
+   url = url.replace("Microsoft", "W3Schools");
+   url = url.replace('%D1','Ñ');
+   url = url.replace('%F1','ñ');
+   url = url.replace('%BA','º');
+   url = url.replace('%AA','ª');
+   url = url.replace('%C1','Á');
+   url = url.replace('%E1','á');
+   url = url.replace('%C9','É');
+   url = url.replace('%E9','é');
+   url = url.replace('%CD','Í');
+   url = url.replace('%ED','í');
+   url = url.replace('%D3','Ó');
+   url = url.replace('%F3','ó');
+   url = url.replace('%DA','Ú');
+   url = url.replace('%FA','ú');
+   url = url.replace('%D2','Ò');
+   url = url.replace('%F2','ò');
+   url = url.replace('%C8','È');
+   url = url.replace('%E8','è');
+   url = url.replace('%C0','À');
+   url = url.replace('%E0','à');
    return url;
 }
 
 // URL Vars
 function getUrlVars() {
-    var url = decode_url(window.location.href);    
+    var url = decode_url(window.location.href);
     var vars = {};
     var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
         vars[key] = value;
