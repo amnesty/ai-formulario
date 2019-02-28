@@ -2,10 +2,37 @@
 **** Auto rellenado de datos via JS ****
 ****************************************/
 
+/* Funcion que decodifica caracteres de la URL */
+function decode_url(url){
+   url = str.replace("Microsoft", "W3Schools");
+   url = str.replace('%D1','Ñ');
+   url = str.replace('%F1','ñ');
+   url = str.replace('%BA','º');
+   url = str.replace('%AA','ª');
+   url = str.replace('%C1','Á');
+   url = str.replace('%E1','á');
+   url = str.replace('%C9','É');
+   url = str.replace('%E9','é');
+   url = str.replace('%CD','Í');
+   url = str.replace('%ED','í');
+   url = str.replace('%D3','Ó');
+   url = str.replace('%F3','ó');
+   url = str.replace('%DA','Ú');
+   url = str.replace('%FA','ú');
+   url = str.replace('%D2','Ò');
+   url = str.replace('%F2','ò');
+   url = str.replace('%C8','È');
+   url = str.replace('%E8','è');
+   url = str.replace('%C0','À');
+   url = str.replace('%E0','à');
+   return url;
+}
+
 // URL Vars
 function getUrlVars() {
+    var url = decode_url(window.location.href);    
     var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
         vars[key] = value;
     });
     return vars;
