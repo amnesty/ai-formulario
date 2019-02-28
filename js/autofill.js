@@ -4,7 +4,6 @@
 
 /* Funcion que decodifica caracteres de la URL */
 function decode_url(url){
-   url = url.replace("Microsoft", "W3Schools");
    url = url.replace('%D1','Ñ');
    url = url.replace('%F1','ñ');
    url = url.replace('%BA','º');
