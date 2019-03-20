@@ -4,26 +4,26 @@
 
 /* Funcion que decodifica caracteres de la URL */
 function decode_url(url){
-   url = url.replace('/%D1/g','Ñ');
-   url = url.replace('/%F1/g','ñ');
-   url = url.replace('/%BA/g','º');
-   url = url.replace('/%AA/g','ª');
-   url = url.replace('/%C1/g','Á');
-   url = url.replace('/%E1/g','á');
-   url = url.replace('/%C9/g','É');
-   url = url.replace('/%E9/g','é');
-   url = url.replace('/%CD/g','Í');
-   url = url.replace('/%ED/g','í');
-   url = url.replace('/%D3/g','Ó');
-   url = url.replace('/%F3/g','ó');
-   url = url.replace('/%DA/g','Ú');
-   url = url.replace('/%FA/g','ú');
-   url = url.replace('/%D2/g','Ò');
-   url = url.replace('/%F2/g','ò');
-   url = url.replace('/%C8/g','È');
-   url = url.replace('/%E8/g','è');
-   url = url.replace('/%C0/g','À');
-   url = url.replace('/%E0/g','à');
+   url = url.replace(/%D1/g,'Ñ');
+   url = url.replace(/%AA/g,'ª');
+   url = url.replace(/%F1/g,'ñ');
+   url = url.replace(/%BA/g,'º');
+   url = url.replace(/%C1/g,'Á');
+   url = url.replace(/%E1/g,'á');
+   url = url.replace(/%C9/g,'É');
+   url = url.replace(/%E9/g,'é');
+   url = url.replace(/%CD/g,'Í');
+   url = url.replace(/%ED/g,'í');
+   url = url.replace(/%D3/g,'Ó');
+   url = url.replace(/%F3/g,'ó');
+   url = url.replace(/%DA/g,'Ú');
+   url = url.replace(/%FA/g,'ú');
+   url = url.replace(/%D2/g,'Ò');
+   url = url.replace(/%F2/g,'ò');
+   url = url.replace(/%C8/g,'È');
+   url = url.replace(/%E8/g,'è');
+   url = url.replace(/%C0/g,'À');
+   url = url.replace(/%E0/g,'à');
    return url;
 }
 
