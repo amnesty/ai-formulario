@@ -25,6 +25,7 @@ function decode_url(url){
    url = url.replace(/%C0/g,'À');
    url = url.replace(/%E0/g,'à');
    url = url.replace(/%E7/g,'ç');
+   url = url.replace(/%C7/g,'Ç');
    return url;
 }
 
