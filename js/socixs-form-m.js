@@ -330,6 +330,7 @@ jQuery(function($) {
     }*/
 
     /* Formato type number para los campos numéricos*/
+    $('.otra_cantidad').attr('type', 'number');
     $('.telefono').attr('type', 'number');
     $('.country').attr('type', 'number');
     $('.entity').attr('type', 'number');
@@ -355,10 +356,6 @@ jQuery(function($) {
     if ($('.otra_cantidad').val() != '') {
       $(".cuota").val(0);
       $('.otra_cuota').val($('.otra_cantidad').val());
-      $('.otra_cantidad').attr('type', 'text'); // Type Texto para poder insertar €
-      if ($('.otra_cantidad').val().indexOf("€") != -1){ // Si ya tiene el €, no lo pintamos
-        $('.otra_cantidad').val($('.otra_cantidad').val()+'€');
-      }
     }});
     // Otra cantidad copiada en cantidad oculta
     //var cantidad = $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_contact_1_cg15_custom_101]']");

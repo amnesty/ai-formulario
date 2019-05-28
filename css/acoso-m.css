@@ -1,0 +1,88 @@
+/** RESET clases**/
+
+.node-type-webform .content-form .amnistia_form_mobile input[type="text"],
+.node-type-webform .content-form .amnistia_form_mobile input[type="number"],
+.node-type-webform .content-form .amnistia_form_mobile input[type="email"],
+.node-type-webform .content-form .amnistia_form_mobile input[type="password"],
+.node-type-webform .content-form .amnistia_form_mobile select {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    border-radius: 0;
+    padding: 0 0 0 10px;
+    height: 60px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.42857143;
+    color: #555;
+    background: #fff none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #bbcc55;
+    border: 1px solid #000;
+}
+
+.node-type-webform .content-form .amnistia_form_mobile input[type="checkbox"]:checked:after,
+.node-type-webform .content-form .amnistia_form_mobile input[type="radio"]:checked:after {
+    background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/ico-check.png) center no-repeat #bbcc55;
+    content: "";
+    font-size: 24px;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    line-height: 1rem;
+    color: #000;
+    border-radius: 5px;
+}
+
+.node-type-webform .content-form .amnistia_form_mobile .payamount-wrapper .value-selected{
+    background-color: #bbcc55;
+    border:2px solid #000000;
+    font-weight: bold;
+    color: #000000;
+}
+
+.node-type-webform .content-form .amnistia_form_mobile .swiper-slide-active{
+    background: #bbcc55;
+}
+
+.node-type-webform .content-form .amnistia_form_mobile .selectButton-wrapper .value-selected{
+  background-color: #bbcc55;
+  border:2px solid #000000;
+  font-weight: bold;
+  color: #000000;
+}
+
+.provincia{
+  background-color:#bbcc55 !important;
+}
+
+.form-submit:hover, .webform-submit:hover{
+  background: #bbcc55 !important;
+}
+
+.form-submit, .webform-submit,
+.form-actions input[type="submit"],
+.preview .form-actions .form-submit {
+  background-color: #bbcc55
+  /*color: #111010;*/
+  /*font-family: "ChronicleDisp-Black";
+  font-family: "Archer";
+  font-weight: bold;
+  font-style: italic;*/
+}
+
+/* Header */
+.image-header__content--medium {
+  padding-top: 33%;
+}

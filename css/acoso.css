@@ -1,0 +1,21 @@
+/************ CSS especifico campaña Acoso Escolar ***************/
+.content-form .active {
+  background-color: #bbcc55;
+}
+
+/* Boton enviar */
+.form-submit, .webform-submit,
+.form-actions input[type="submit"],
+.preview .form-actions .form-submit {
+  background-color: #bbcc55;
+  color: #111010;
+  /*font-family: "ChronicleDisp-Black";*/
+  font-family: "Teko";
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Header */
+.image-header__content--medium {
+  padding-top: 33%;
+}
