@@ -1,11 +1,36 @@
 /** RESET clases**/
 
+/* Importar tipografias */
+@font-face {
+      font-family: 'Teko';
+      src: url('../font/Teko-Medium') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+      font-family: 'Montserrat';
+      src: url('../font/Montserrat-Regular') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+.node-type-webform .content-form .amnistia_form_mobile label,
+.node-type-webform .content-form .amnistia_form_mobile .caja-content label,
+.node-type-webform .content-form .amnistia_form_mobile p {
+  font-family: 'Montserrat';
+}
+
+.node-type-webform .content-form .amnistia_form_mobile .form-textarea-wrapper textarea {
+  font-family: 'Montserrat';
+}
+
 .node-type-webform .content-form .amnistia_form_mobile input[type="text"],
 .node-type-webform .content-form .amnistia_form_mobile input[type="number"],
 .node-type-webform .content-form .amnistia_form_mobile input[type="email"],
 .node-type-webform .content-form .amnistia_form_mobile input[type="password"],
 .node-type-webform .content-form .amnistia_form_mobile select {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Montserrat';
     font-size: 15px;
     font-weight: normal;
     border-radius: 0;
@@ -32,6 +57,7 @@
 
 .node-type-webform .content-form .amnistia_form_mobile input[type="checkbox"]:checked:after,
 .node-type-webform .content-form .amnistia_form_mobile input[type="radio"]:checked:after {
+    font-family: 'Montserrat';
     background: url(/sites/all/modules/amnistia_mobile_webform/assets/images/ico-check.png) center no-repeat #bbcc55;
     content: "";
     font-size: 24px;
@@ -45,8 +71,9 @@
     border-radius: 5px;
 }
 
-.node-type-webform .content-form .amnistia_form_mobile .payamount-wrapper .value-selected{
+.node-type-webform .content-form .amnistia_form_mobile .payamount-wrapper .value-selected {
     background-color: #bbcc55;
+    font-family: 'Montserrat';
     border:2px solid #000000;
     font-weight: bold;
     color: #000000;
@@ -54,10 +81,12 @@
 
 .node-type-webform .content-form .amnistia_form_mobile .swiper-slide-active{
     background: #bbcc55;
+    font-family: 'Montserrat';
 }
 
 .node-type-webform .content-form .amnistia_form_mobile .selectButton-wrapper .value-selected{
   background-color: #bbcc55;
+  font-family: 'Montserrat';
   border:2px solid #000000;
   font-weight: bold;
   color: #000000;
@@ -74,15 +103,19 @@
 .form-submit, .webform-submit,
 .form-actions input[type="submit"],
 .preview .form-actions .form-submit {
-  background-color: #bbcc55
-  /*color: #111010;*/
-  /*font-family: "ChronicleDisp-Black";
-  font-family: "Archer";
-  font-weight: bold;
-  font-style: italic;*/
+  background-color: #bbcc55;
+  font-family: 'Teko';
 }
 
 /* Header */
 .image-header__content--medium {
   padding-top: 33%;
+}
+
+.heading--tape--dark {
+  font-family: 'Teko';
+}
+
+.webform-progressbar.mobile {
+  font-family: 'Teko';
 }
