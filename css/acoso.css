@@ -1,4 +1,20 @@
 /************ CSS especifico campaña Acoso Escolar ***************/
+
+/* Importar tipografias */
+@font-face {
+      font-family: 'Teko';
+      src: url('../font/Teko-Medium') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+      font-family: 'Montserrat';
+      src: url('../font/Montserrat-Regular') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
 .content-form .active {
   background-color: #bbcc55;
 }
@@ -7,15 +23,53 @@
 .form-submit, .webform-submit,
 .form-actions input[type="submit"],
 .preview .form-actions .form-submit {
-  background-color: #bbcc55;
-  color: #111010;
-  /*font-family: "ChronicleDisp-Black";*/
-  font-family: "Teko";
-  font-weight: bold;
-  font-style: italic;
+        background-color: #bbcc55;
+        color: #111010;
+        font-family: Teko;
+        /*font-weight: bold;*/
+        /*font-style: italic;*/
 }
 
 /* Header */
 .image-header__content--medium {
-  padding-top: 33%;
+        padding-top: 33%;
+}
+
+.heading--tape--dark, .heading--tape--mid {
+        font-family: Teko;
+}
+
+/* Body */
+.webform-conditional-processed .content-end-form .politica,
+.content-form .text-intro,
+.box-form-es p,
+.preview, .preview label {
+        font-family: Montserrat;
+}
+
+.content-form .webform-conditional-processed .input-generic,
+.content-form .webform-conditional-processed .caja-content label,
+.content-form .webform-conditional-processed .caja-content .capa-fechas div select,
+.webform-conditional-processed .content-datos .info-nif,
+.webform-conditional-processed .content-datos a {
+        font-family: Montserrat;
+        font-size: 17px;
+        font-weight: 600;
+        /* font-size: 48px; */
+        /* text-transform: uppercase; */
+}
+
+/* Titulos */
+.content-form h2 {
+        font-family: Teko;
+}
+
+/* Cajas laterales */
+.box-es-right .three-column h3 {
+        font-family: Teko;
+}
+
+.box-es-right .three-column p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
 }
