@@ -1,11 +1,26 @@
 /** RESET clases**/
 
+/* Importar tipografias */
+@font-face {
+      font-family: 'Teko';
+      src: url('../font/Teko-Medium') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+@font-face {
+      font-family: 'Montserrat';
+      src: url('../font/Montserrat-Regular') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
 .node-type-webform .content-form .amnistia_form_mobile input[type="text"],
 .node-type-webform .content-form .amnistia_form_mobile input[type="number"],
 .node-type-webform .content-form .amnistia_form_mobile input[type="email"],
 .node-type-webform .content-form .amnistia_form_mobile input[type="password"],
 .node-type-webform .content-form .amnistia_form_mobile select {
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Montserrat';
     font-size: 15px;
     font-weight: normal;
     border-radius: 0;
