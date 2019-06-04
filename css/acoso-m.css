@@ -79,12 +79,12 @@
     color: #000000;
 }
 
-.node-type-webform .content-form .amnistia_form_mobile .swiper-slide-active{
+.node-type-webform .content-form .amnistia_form_mobile .swiper-slide-active {
     background: #bbcc55;
     font-family: 'Montserrat';
 }
 
-.node-type-webform .content-form .amnistia_form_mobile .selectButton-wrapper .value-selected{
+.node-type-webform .content-form .amnistia_form_mobile .selectButton-wrapper .value-selected {
   background-color: #bbcc55;
   font-family: 'Montserrat';
   border:2px solid #000000;
@@ -105,6 +105,11 @@
 .preview .form-actions .form-submit {
   background-color: #bbcc55;
   font-family: 'Teko';
+}
+
+.node-type-webform .content-form .amnistia_form_mobile .webform-previous.cancel.form-submit {
+  font-family: 'Teko';
+  font-size: 20px;
 }
 
 /* Header */
