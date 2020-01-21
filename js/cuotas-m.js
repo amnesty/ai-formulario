@@ -71,20 +71,28 @@ jQuery(function($) {
 
     switch( $('input[type="button"] .selectButton-input, .value-selected').attr('id') ){
       case '12': //Mensual
-      //Cantidad por defecto
-      $('.cuota-2').find('.payamount-input').addClass("value-selected");
+      //Si no hay cantidad marcada, marcamos la por defecto
+      if( ! $('.cuota-1').find('.payamount-input').hasClass('value-selected') && ! $('.cuota-3').find('.payamount-input').hasClass('value-selected') ){
+          $('.cuota-2').find('.payamount-input').addClass("value-selected");
+      }
       valores_mensuales();
       break;
 
       case '4': //Trimestral
       //Cantidad por defecto
-      $('.cuota-5').find('.payamount-input').addClass("value-selected");
+      //Si no hay cantidad marcada, marcamos la por defecto
+      if( ! $('.cuota-4').find('.payamount-input').hasClass('value-selected') && ! $('.cuota-6').find('.payamount-input').hasClass('value-selected') ){
+          $('.cuota-5').find('.payamount-input').addClass("value-selected");
+      }
       valores_trimestrales();
       break;
 
       case '1': //Anual
       //Cantidad por defecto
-      $('.cuota-8').find('.payamount-input').addClass("value-selected");
+      //Si no hay cantidad marcada, marcamos la por defecto
+      if( ! $('.cuota-7').find('.payamount-input').hasClass('value-selected') && ! $('.cuota-9').find('.payamount-input').hasClass('value-selected') ){
+          $('.cuota-8').find('.payamount-input').addClass("value-selected");
+      }
       valores_anuales();
       break;
     }
