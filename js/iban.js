@@ -49,13 +49,12 @@ jQuery(function($) {
   }
 
 	$(".iban").focusout( function(){
-
-    var countryid = $("[name='submitted[civicrm_1_contact_1_cg2_fieldset][civicrm_1_contact_1_cg2_custom_3]']");
-    var country = $("[name='submitted[civicrm_1_contact_1_cg2_fieldset][civicrm_1_contact_1_cg2_custom_4]']");
-    var entity = $("[name='submitted[civicrm_1_contact_1_cg2_fieldset][civicrm_1_contact_1_cg2_custom_5]']");
-    var office = $("[name='submitted[civicrm_1_contact_1_cg2_fieldset][civicrm_1_contact_1_cg2_custom_6]']");
-    var check = $("[name='submitted[civicrm_1_contact_1_cg2_fieldset][civicrm_1_contact_1_cg2_custom_7]']");
-    var account = $("[name='submitted[civicrm_1_contact_1_cg2_fieldset][civicrm_1_contact_1_cg2_custom_8]']");
+    var countryid = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_3]']");
+    var country = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_4]']");
+    var entity = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_5]']");
+    var office = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_6]']");
+    var check = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_7]']");
+    var account = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_8]']");
 
     //quitamos espacios y símbolos
     if( $(this).val().length <= 30){
