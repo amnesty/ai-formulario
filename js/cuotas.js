@@ -2,7 +2,18 @@
 
 jQuery(function($) {
 
+
+  
+  console.log("frecuencia2");
+  console.log($(".frecuencia").val());
+
+
   function valores_mensuales(){
+
+
+    console.log("Valores");
+    
+
     $('.cuota-1').show();
     $('.cuota-2').show();
     $('.cuota-3').show();
@@ -75,6 +86,8 @@ jQuery(function($) {
   }
 
   function valores_anuales(){
+
+
     $('.cuota-1').hide();
     $('.cuota-2').hide();
     $('.cuota-3').hide();
@@ -94,15 +107,24 @@ jQuery(function($) {
 
   // Al inicializar, añadimos a cada cuota con un identificador cuota-x
   var class_id = 1;
-   var num_cuotas = $(".form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48").length;
-   $(".form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48").each(function(){
+   //var num_cuotas = $(".form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48").length;
+   var num_cuotas = $(".form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-membership-1-membership-custom-126").length;
+   
+   console.log("Nro. cuotas:"+num_cuotas);
+   $(".form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-membership-1-membership-custom-126").each(function(){
+   //$(".form-item-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-contact-1-cg15-custom-48").each(function(){
      //marcamos todas las cuotas con un class específico menos la última que es "otra cantidad" que siempre se tiene que mostrar
      if (class_id < num_cuotas){
+
          $(this).find(".cuota").addClass("cuota-"+class_id);
          $(this).find(".option").addClass("cuota-"+class_id);
      }
      class_id++;
    });
+
+
+ 
+   
 
   // Al inicializar, vemos qué valores hay que poner según la periodicidad
   switch( $(".frecuencia").val() ) {
@@ -129,10 +151,13 @@ jQuery(function($) {
 
   /***** Cada vez que cambia la periodicidad, revisamos los valores *****/
   $(".frecuencia").change( function() {
+    console.log("frecuencia");
 
     // Escondemos "otra cantidad" por si acaso porque por defecto marcamos la opción del medio
     $('.capa-other-quant').hide();
 
+
+    
     switch( $(".frecuencia").val() ) {
       case '12': //Mensual
       //Valor por defecto
