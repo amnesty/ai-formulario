@@ -1,19 +1,11 @@
-.webform-conditional-processed .content-colaborar .capa-other-quant {
-    margin-left: -130px;
+.iban[maxlength="2"] {
+  width: 4rem;
 }
 
-@media only screen and (max-width: 986px) {
-
-  .webform-conditional-processed .content-colaborar .capa-other-quant {
-      margin-left: -130px;
-  }
-
+.iban[maxlength="4"] {
+  width: 8rem;
 }
 
-@media only screen and (max-width: 769px) {
-
-  .webform-conditional-processed .content-colaborar .capa-other-quant {
-      margin-left: -130px;
-  }
-
+.iban[maxlength="10"] {
+  width: 16rem;
 }
