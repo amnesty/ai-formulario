@@ -51,36 +51,5 @@
 
   $("select.frecuencia").closest("form").parent()
       .addClass("content-form");
-
-  /* Cuenta bancaria */
-
-  function cuentaActual()
-  {
-      return $('.iban [name$="[iban_pais]"]').val() +
-          $('.iban [name$="[iban_digitoscontrol_sepa]"]').val() +
-          $('.iban [name$="[iban_entidad_bancaria]"]').val() +
-          $('.iban [name$="[iban_oficina_bancaria]"]').val() +
-          $('.iban [name$="[iban_digitoscontrol_es]"]').val() +
-          $('.iban [name$="[iban_cuenta]"]').val();
-  }
-
-  $('.iban input, .iban select').change(function () {
-      let iban = cuentaActual();
-      $('.iban [name$="[civicrm_1_membership_1_membership_custom_128]"]').val(iban);
-  });
-
-  if (cuentaActual().length == 2) {
-      let cuenta = $('.iban [name$="[civicrm_1_membership_1_membership_custom_128]"]').val();
-
-      $('.iban [name$="[iban_digitoscontrol_sepa]"]').val(cuenta.substring(2, 4));
-      $('.iban [name$="[iban_entidad_bancaria]"]').val(cuenta.substring(4, 8));
-      $('.iban [name$="[iban_oficina_bancaria]"]').val(cuenta.substring(8, 12));
-      $('.iban [name$="[iban_digitoscontrol_es]"]').val(cuenta.substring(12, 14));
-      $('.iban [name$="[iban_cuenta]"]').val(cuenta.substring(14));
-      $('.iban [name$="[iban_digitoscontrol_sepa]"]').val(cuenta.substring(2, 4));
-  }
 });
-
-
-
 

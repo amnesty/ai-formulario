@@ -1,5 +1,63 @@
 jQuery(function($) {
 
+  /**
+   * Unifica los campos de la cuenta IBAN en un campo de texto.
+   *
+   * A partir de los campos con nombre:
+   *
+   * - iban_pais
+   * - iban_digitoscontrol_sepa
+   * - iban_entidad_bancaria
+   * - iban_oficina_bancaria
+   * - iban_digitoscontrol_es
+   * - iban_cuenta
+   *
+   * Se actualiza el campo personalizado IBAN de las membresías:
+   *
+   * - custom_128
+   *
+   * La funcionalidad solo se aplica si los campos tienen un
+   * ancendiente con la clase `iban`.
+   */
+
+  var iban = $('.iban [name$="[civicrm_1_membership_1_membership_custom_128]"]');
+
+  var country = $('.iban [name$="[iban_pais]"]');
+  var sepa_check = $('.iban [name$="[iban_digitoscontrol_sepa]"]');
+  var entity = $('.iban [name$="[iban_entidad_bancaria]"]');
+  var office = $('.iban [name$="[iban_oficina_bancaria]"]');
+  var es_check = $('.iban [name$="[iban_digitoscontrol_es]"]');
+  var account = $('.iban [name$="[iban_cuenta]"]');
+ 
+  function cuentaActual()
+  {
+      return country.val() +
+          sepa_check.val() +
+          entity.val() +
+          office.val() +
+          es_check.val() +
+          account.val();
+  }
+
+  $('.iban input, .iban select').change(function () {
+      iban.val(cuentaActual());
+  });
+
+  if (cuentaActual().length == 2) {
+      let cuenta = iban.val();
+
+      country.val(cuenta.substring(0, 2));
+      sepa_check.val(cuenta.substring(2, 4));
+      entity.val(cuenta.substring(4, 8));
+      office.val(cuenta.substring(8, 12));
+      es_check.val(cuenta.substring(12, 14));
+      account.val(cuenta.substring(14));      
+  }
+
+  /**
+   * Valida el campo IBAN.
+   */
+
   function modulo (divident, divisor) {
     var cDivident = '';
     var cRest = '';
@@ -49,13 +107,6 @@ jQuery(function($) {
   }
 
 	$(".iban").focusout( function(){
-    var countryid = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_3]']");
-    var country = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_4]']");
-    var entity = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_5]']");
-    var office = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_6]']");
-    var check = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_7]']");
-    var account = $("[name='submitted[caja_cuenta][fila_1_cuenta][civicrm_1_contact_1_cg2_custom_8]']");
-
     //quitamos espacios y símbolos
     if( $(this).val().length <= 30){
       $(this).val( $(this).val().replace(/\-/g,'').replace(/[ ]+/g,'') );
@@ -73,11 +124,11 @@ jQuery(function($) {
 
 			$(".iban").val(iban01+""+iban02+"-"+iban03+"-"+iban04+"-"+iban05+"-"+iban06);
 
-      countryid.val(iban01);
-      country.val(iban02);
+      country.val(iban01);
+      sepa_check.val(iban02);
       entity.val(iban03);
       office.val(iban04);
-      check.val(iban05);
+      es_check.val(iban05);
       account.val(iban06);
 
 		}
@@ -101,11 +152,11 @@ jQuery(function($) {
 
       $(".iban").val(iban03+"-"+iban04+"-"+iban05+"-"+iban06);
 
-      countryid.val(iban01);
-      country.val(iban02);
+      country.val(iban01);
+      sepa_check.val(iban02);
       entity.val(iban03);
       office.val(iban04);
-      check.val(iban05);
+      es_check.val(iban05);
       account.val(iban06);
     }
 
