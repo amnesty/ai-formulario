@@ -1,7 +1,6 @@
 /**
- * JS especifico para la ponderación de las cantidades de las cuotas
- * en función de la periodicidad y para la unión de las partes de
- * una cuenta IBAN en un único campo.
+ * Muestra las cuotas sugeridas que corresponden a la
+ * periodicidad elegida.
  */
 
  jQuery(function($) {
