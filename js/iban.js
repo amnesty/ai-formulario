@@ -30,6 +30,8 @@ jQuery(function($) {
     iban = $('.iban [name$="[civicrm_1_contribution_1_cg25_custom_136]"]');
   }
 
+  var ibanContacto = $('.iban [name$="[civicrm_1_contact_1_cg2_custom_192]"]');
+
   var country = $('.iban [name$="[iban_pais]"]');
   var sepa_check = $('.iban [name$="[iban_digitoscontrol_sepa]"]');
   var entity = $('.iban [name$="[iban_entidad_bancaria]"]');
@@ -49,6 +51,10 @@ jQuery(function($) {
 
   $('.iban input, .iban select').change(function () {
     iban.val(cuentaActual());
+
+    if (ibanContacto.length) {
+	ibanContacto.val(cuentaActual());
+    }
   });
 
   // Al cargar la página, nos aseguramos de cargar los campos
