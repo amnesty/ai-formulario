@@ -214,4 +214,26 @@ jQuery(function($) {
 
   //$(".check-politica").attr("checked", false);
 
+  // f2f agencias externas
+
+  // Interes en Activista
+  if(urlVars['interes_act'] == 'si'){
+    $("[name='submitted[opciones][civicrm_5_activity_1_activity_activity_type_id][196]']").attr("checked",true);
+  }
+
+  // Interés en Libertad de expresión
+  if((urlVars['interes_lde']) == 'si'){
+    $("[name='submitted[opciones][civicrm_2_activity_1_activity_activity_type_id][195]']").attr("checked",true);
+  }
+
+  // Interés en Derechos Sociales y Culturales 
+  if((urlVars['interes_desc']) == 'si'){
+    $("[name='submitted[opciones][civicrm_4_activity_1_activity_activity_type_id][195]']").attr("checked",true);
+  }
+
+  // Interés en Feminismo y Género 
+  if((urlVars['interes_fem']) == 'si'){
+    $("[name='submitted[opciones][civicrm_3_activity_1_activity_activity_type_id][195]']").attr( "checked",true);
+  }
+
 });
