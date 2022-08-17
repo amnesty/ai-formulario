@@ -7,6 +7,14 @@
 
   /* Cuotas */
 
+  function frecuenciaSeleccionada() {
+    if ($("select.frecuencia").length) {
+      return $("select.frecuencia").val();
+    } else {
+      return $("input.frecuencia:checked").val();
+    }
+  }
+
   function cuotaActual() {
       let sugeridaSeleccionada = $("input.cuota_sugerida:visible:checked").val();
 
@@ -16,8 +24,7 @@
   }
 
   function controlaCuotasSugeridas() {
-      let frecuencia = $("select.frecuencia").val();
-
+      let frecuencia = frecuenciaSeleccionada();
       $(".cuotas").hide();
       $(`.sugeridas_periodicidad_${frecuencia}`).show();
   }
@@ -37,7 +44,13 @@
       controlaOtraCuota();
   });
 
-  $("select.frecuencia").change(function() {
+  if ($("select.frecuencia").length) {
+    frecuencia = $("select.frecuencia");
+  } else {
+    frecuencia = $("input.frecuencia");
+  }
+
+  frecuencia.change(function() {
       controlaCuotasSugeridas();
       controlaOtraCuota();
   });
@@ -45,10 +58,10 @@
   controlaCuotasSugeridas();
   controlaOtraCuota();
 
-  $("select.frecuencia").closest("form")
+  frecuencia.closest("form")
       .addClass("webform-conditional-processed");
 
-  $("select.frecuencia").closest("form").parent()
+  frecuencia.closest("form").parent()
       .addClass("content-form");
 });
 
