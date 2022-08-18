@@ -186,6 +186,48 @@ header, hgroup, nav, section {
     background-position: 115px center;
 }
 
+/* Botones radio con la clase `radio-as-button` en el contenedor */
+
+.node-type-webform .content-form .radio-as-button input[type=radio] {
+    display: none;
+}
+
+.node-type-webform .content-form .content-colaborar .cuotas.radio-as-button {
+    width: 100%;
+}
+
+.node-type-webform .content-form .radio-as-button .form-radios {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.node-type-webform .content-form .radio-as-button .form-radios > * {
+    flex-grow: 1;
+}
+
+.node-type-webform .content-form .radio-as-button .form-radios label {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #eeeeee;
+    border: 2px solid #CCCCCC;
+    font-weight: bold;
+    color: #CCCCCC;
+    align-items: center;
+    justify-content: center; 
+    font-size: 17px;
+}
+
+.node-type-webform .content-form .radio-as-button .form-radios input[type=radio]:checked + label {
+    background-color: #f1e60d;
+    color: #000000;
+}
+
+.node-type-webform .content-form .radio-as-button .form-radios label:hover {
+    cursor: pointer;
+}
+
 /* Elementos de desplegable de fecha ----------- */
 .content-form .webform-conditional-processed .caja-content .capa-fechas div div {
     width: 100px;
