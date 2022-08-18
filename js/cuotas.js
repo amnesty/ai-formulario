@@ -15,12 +15,9 @@
     }
   }
 
-  function cuotaActual() {
-      let sugeridaSeleccionada = $("input.cuota_sugerida:visible:checked").val();
-
-      if (sugeridaSeleccionada != 0) {
-          return sugeridaSeleccionada;
-      }
+  function cuotaSeleccionada() {
+      let frecuencia = frecuenciaSeleccionada();
+      return $(`.sugeridas_periodicidad_${frecuencia} input.cuota_sugerida:checked`).val();
   }
 
   function controlaCuotasSugeridas() {
@@ -28,40 +25,37 @@
       $(".cuotas").hide();
       $(`.sugeridas_periodicidad_${frecuencia}`).show();
   }
-
   function controlaOtraCuota() {
-      let cuota = cuotaActual();
+    let cuota = cuotaSeleccionada();
 
-      if (!cuota) {
-          $("input.otra_cuota").parent().show();
-      } else {
-          $("input.otra_cuota").val(cuota);
-          $("input.otra_cuota").parent().hide();
-      }
-  }
+    if (cuota == 0) {
+        $("input.otra_cuota").parent().show();
+    } else {
+        $("input.otra_cuota").val(cuota);
+        $("input.otra_cuota").parent().hide();
+    }
+}
 
-  $("input.cuota_sugerida").change(function() {
-      controlaOtraCuota();
-  });
+$("input.cuota_sugerida").change(function() {
+    controlaOtraCuota();
+});
+if ($("select.frecuencia").length) {
+  frecuencia = $("select.frecuencia");
+} else {
+  frecuencia = $("input.frecuencia");
+}
 
-  if ($("select.frecuencia").length) {
-    frecuencia = $("select.frecuencia");
-  } else {
-    frecuencia = $("input.frecuencia");
-  }
-
-  frecuencia.change(function() {
-      controlaCuotasSugeridas();
-      controlaOtraCuota();
-  });
-
-  controlaCuotasSugeridas();
-  controlaOtraCuota();
-
-  frecuencia.closest("form")
-      .addClass("webform-conditional-processed");
-
-  frecuencia.closest("form").parent()
-      .addClass("content-form");
+frecuencia.change(function() {
+    controlaCuotasSugeridas();
+    controlaOtraCuota();
 });
 
+controlaCuotasSugeridas();
+controlaOtraCuota();
+
+frecuencia.closest("form")
+    .addClass("webform-conditional-processed");
+
+frecuencia.closest("form").parent()
+    .addClass("content-form");
+});
