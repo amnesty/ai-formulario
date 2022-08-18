@@ -219,6 +219,14 @@ header, hgroup, nav, section {
     font-size: 17px;
 }
 
+.node-type-webform .content-form .radio-as-button .form-radios .form-type-radio {
+    padding: 0;
+}
+
+.node-type-webform .content-form .radio-as-button .form-radios .form-type-radio:last-child {
+    margin-right: 0;
+}
+
 .node-type-webform .content-form .radio-as-button .form-radios input[type=radio]:checked + label {
     background-color: #f1e60d;
     color: #000000;
