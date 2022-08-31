@@ -1,7 +1,9 @@
 jQuery(function($) {
 
   /**
-   * Unifica los campos de la cuenta IBAN en un campo de texto.
+   * Unifica los campos de la cuenta IBAN en un campo de texto
+   * y valida el IBAN, reemplazando los dígitos de control
+   * por los correctos.
    *
    * A partir de los campos con nombre:
    *
@@ -38,22 +40,84 @@ jQuery(function($) {
   var office = $('.iban [name$="[iban_oficina_bancaria]"]');
   var es_check = $('.iban [name$="[iban_digitoscontrol_es]"]');
   var account = $('.iban [name$="[iban_cuenta]"]');
- 
-  function cuentaActual()
-  {
-    return country.val() +
-      sepa_check.val() +
-      entity.val() +
-      office.val() +
-      es_check.val() +
-      account.val();
+
+  function usaVariosCampos() {
+    return country.length > 0;
+  }
+
+  function cuentaActual() {
+    if (usaVariosCampos()) {
+      return country.val() + sepa_check.val() + entity.val() + office.val() + es_check.val() + account.val();
+    } else {
+      return iban.val();
+    }
+  }
+
+  function modulo (divident, divisor) {
+    var cDivident = '';
+    var cRest = '';
+
+    for (var i in divident ) {
+        var cChar = divident[i];
+        var cOperator = cRest + '' + cDivident + '' + cChar;
+
+        if ( cOperator < parseInt(divisor) ) {
+                cDivident += '' + cChar;
+        } else {
+                cRest = cOperator % divisor;
+                if ( cRest == 0 ) {
+                    cRest = '';
+                }
+                cDivident = '';
+        }
+
+    }
+    cRest += '' + cDivident;
+    if (cRest == '') {
+        cRest = 0;
+    }
+    return cRest;
+  }
+
+  function calcularIBAN(codigoPais, ccc){
+    var pesos = {
+      A:10, B:11, C:12, D:13,
+      E:14, F:15, G:16, H:17,
+      I:18, J:19, K:20, L:21,
+      M:22, N:23, O:24, P:25,
+      Q:26, R:27, S:28, T:29,
+      U:30, V:31, W:32, X:33,
+      Y:34, Z:35
+    };
+
+    var dividendo = ccc+''+pesos[codigoPais.substring(0,1)]+''+pesos[codigoPais.substring(1,2)]+'00';
+    var resto = modulo(dividendo,97);
+    var digitoControl =  (98 - resto);
+
+    if( digitoControl < 10 ) {
+      digitoControl = '0'+digitoControl;
+    }
+
+    return codigoPais+''+digitoControl+''+ccc;
   }
 
   $('.iban input, .iban select').change(function () {
-    iban.val(cuentaActual());
+    var actual = cuentaActual();
+
+    if (actual.length == 20) {
+      var calculado = calcularIBAN("ES", actual);
+
+      if (actual != calculado) {
+        iban.val(calculado);
+      }
+    }
+
+    if (usaVariosCampos()) {
+      iban.val(actual);
+    }
 
     if (ibanContacto.length) {
-	ibanContacto.val(cuentaActual());
+      ibanContacto.val(calculado);
     }
   });
 
@@ -63,9 +127,8 @@ jQuery(function($) {
   // Esto da soporte a la carga del formulario con errores de
   // validación encontrados por el servidor
 
-  if( cuentaActual().length == 2 ) {
+  if(usaVariosCampos()) {
     let cuenta = iban.val();
-
     country.val(cuenta.substring(0, 2));
     sepa_check.val(cuenta.substring(2, 4));
     entity.val(cuenta.substring(4, 8));
@@ -81,5 +144,12 @@ jQuery(function($) {
     office.addClass('error');
     es_check.addClass('error');
     account.addClass('error');
+  } else {
+    country.removeClass('error');
+    sepa_check.removeClass('error');
+    entity.removeClass('error');
+    office.removeClass('error');
+    es_check.removeClass('error');
+    account.removeClass('error');
   }
 });
