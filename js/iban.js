@@ -129,12 +129,11 @@ jQuery(function($) {
 
   if(usaVariosCampos()) {
     let cuenta = iban.val();
-    country.val(cuenta.substring(0, 2));
     sepa_check.val(cuenta.substring(2, 4));
     entity.val(cuenta.substring(4, 8));
     office.val(cuenta.substring(8, 12));
     es_check.val(cuenta.substring(12, 14));
-    account.val(cuenta.substring(14));      
+    account.val(cuenta.substring(14));
   }
 
   if( iban.hasClass('error') ) {
