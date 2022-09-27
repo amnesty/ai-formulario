@@ -53,6 +53,34 @@ jQuery(function($) {
     }
   }
 
+  function rellenaCampos(cuenta) {
+    sepa_check.val(cuenta.substring(2, 4));
+    entity.val(cuenta.substring(4, 8));
+    office.val(cuenta.substring(8, 12));
+    es_check.val(cuenta.substring(12, 14));
+    account.val(cuenta.substring(14));
+  }
+
+  function anunciaError(hayError) {
+    if( hayError ) {
+      iban.addClass('error');
+      country.addClass('error');
+      sepa_check.addClass('error');
+      entity.addClass('error');
+      office.addClass('error');
+      es_check.addClass('error');
+      account.addClass('error');
+    } else {
+      iban.removeClass('error');
+      country.removeClass('error');
+      sepa_check.removeClass('error');
+      entity.removeClass('error');
+      office.removeClass('error');
+      es_check.removeClass('error');
+      account.removeClass('error');
+    }
+  }
+
   function modulo (divident, divisor) {
     var cDivident = '';
     var cRest = '';
@@ -104,12 +132,15 @@ jQuery(function($) {
   $('.iban input, .iban select').change(function () {
     var actual = cuentaActual();
 
-    if (actual.length == 20) {
-      var calculado = calcularIBAN("ES", actual);
+    if (actual.length != 20) {
+      anunciaError(true);
+      return;
+    }
 
-      if (actual != calculado) {
-        iban.val(calculado);
-      }
+    var calculado = calcularIBAN("ES", actual);
+    if (actual != calculado) {
+      anunciaError(true);
+      return;
     }
 
     if (usaVariosCampos()) {
@@ -129,26 +160,8 @@ jQuery(function($) {
 
   if(usaVariosCampos()) {
     let cuenta = iban.val();
-    sepa_check.val(cuenta.substring(2, 4));
-    entity.val(cuenta.substring(4, 8));
-    office.val(cuenta.substring(8, 12));
-    es_check.val(cuenta.substring(12, 14));
-    account.val(cuenta.substring(14));
+    rellenaCampos(cuenta);
   }
 
-  if( iban.hasClass('error') ) {
-    country.addClass('error');
-    sepa_check.addClass('error');
-    entity.addClass('error');
-    office.addClass('error');
-    es_check.addClass('error');
-    account.addClass('error');
-  } else {
-    country.removeClass('error');
-    sepa_check.removeClass('error');
-    entity.removeClass('error');
-    office.removeClass('error');
-    es_check.removeClass('error');
-    account.removeClass('error');
-  }
+  anunciaError(iban.hasClass('error'));
 });

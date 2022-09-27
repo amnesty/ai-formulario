@@ -3,7 +3,7 @@
  * periodicidad elegida.
  */
 
- jQuery(function($) {
+jQuery(function($) {
 
   /* Cuotas */
 
@@ -15,12 +15,9 @@
     }
   }
 
-  function cuotaActual() {
-      let sugeridaSeleccionada = $("input.cuota_sugerida:visible:checked").val();
-
-      if (sugeridaSeleccionada != 0) {
-          return sugeridaSeleccionada;
-      }
+  function cuotaSugeridaActual() {
+    let sugeridas = ".sugeridas_periodicidad_" + frecuenciaSeleccionada();
+    return $(sugeridas).find("input.cuota_sugerida:checked").val();
   }
 
   function controlaCuotasSugeridas() {
@@ -30,9 +27,9 @@
   }
 
   function controlaOtraCuota() {
-      let cuota = cuotaActual();
+      let cuota = cuotaSugeridaActual();
 
-      if (!cuota) {
+      if (cuota == 0) {
           $("input.otra_cuota").val("");
           $("input.otra_cuota").parent().show();
       } else {
