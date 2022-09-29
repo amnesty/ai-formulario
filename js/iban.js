@@ -150,6 +150,8 @@ jQuery(function($) {
       return;
     }
 
+    anunciaError(false);
+
     if (ibanContacto.length) {
       ibanContacto.val(calculado);
     }
