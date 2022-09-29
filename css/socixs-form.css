@@ -49,6 +49,10 @@
         max-width: 350px; /* H: ancho maximo de los campos */
     }
 
+    .webform-conditional-processed .error {
+        border: 2px solid red;
+    }
+
     .webform-conditional-processed .content-colaborar,
     .webform-conditional-processed .content-datos,
     .webform-conditional-processed .content-direccion,

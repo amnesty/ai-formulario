@@ -252,26 +252,6 @@ jQuery(function($) {
       }
     });
 
-    // Mark errors in select boxes
-
-    $(".error").not(".messages").each( function(){
-      if ($(this).is("select")){
-          $(this).parent().addClass("form-error");
-          $(this).parent().css("border", "#f00 2px solid");
-      }
-      else {
-          $(this).css("border", "#f00 2px solid");
-      }
-    });
-
-    // Cuenta entera en rojo
-    if($('.account').hasClass('error') || $('.dc').hasClass('error') ){
-            $('.entity').css("border", "#f00 2px solid");
-            $('.office').css("border", "#f00 2px solid");
-            $('.dc').css("border", "#f00 2px solid");
-            $('.account').not(".first").css("border", "#f00 2px solid");
-    }
-
   /*  $('a.popup').colorbox({iframe:true, width:"50%", height:"50%"});
     $('a.popup_little').colorbox({iframe:true, width:"50%", height:"20%", "scrolling":false});
 

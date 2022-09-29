@@ -132,19 +132,22 @@ jQuery(function($) {
   $('.iban input, .iban select').change(function () {
     var actual = cuentaActual();
 
-    if (actual.length != 20) {
-      anunciaError(true);
+    if (usaVariosCampos()) {
+      iban.val(actual);
+    }
+
+    if (actual.length != 24) {
       return;
     }
 
-    var calculado = calcularIBAN("ES", actual);
+    var calculado = calcularIBAN(
+      actual.substring(0, 2),
+      actual.substring(4)
+    );
+
     if (actual != calculado) {
       anunciaError(true);
       return;
-    }
-
-    if (usaVariosCampos()) {
-      iban.val(actual);
     }
 
     if (ibanContacto.length) {
@@ -159,9 +162,8 @@ jQuery(function($) {
   // validación encontrados por el servidor
 
   if(usaVariosCampos()) {
-    let cuenta = iban.val();
-    rellenaCampos(cuenta);
+    rellenaCampos(iban.val());
   }
 
-  anunciaError(iban.hasClass('error'));
+  anunciaError(account.hasClass('error'));
 });
