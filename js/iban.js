@@ -165,5 +165,5 @@ jQuery(function($) {
     rellenaCampos(iban.val());
   }
 
-  anunciaError(account.hasClass('error'));
+  anunciaError(iban.hasClass('error'));
 });
