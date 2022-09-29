@@ -64,7 +64,6 @@ jQuery(function($) {
   function anunciaError(hayError) {
     if( hayError ) {
       iban.addClass('error');
-      country.addClass('error');
       sepa_check.addClass('error');
       entity.addClass('error');
       office.addClass('error');
@@ -72,7 +71,6 @@ jQuery(function($) {
       account.addClass('error');
     } else {
       iban.removeClass('error');
-      country.removeClass('error');
       sepa_check.removeClass('error');
       entity.removeClass('error');
       office.removeClass('error');
