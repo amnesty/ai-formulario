@@ -159,12 +159,13 @@ jQuery(function($) {
   }
 
   /* Para subida de cuota */
-  if((urlVars['resultado'] != 'POSITIVO') || !(urlVars['cuota']) && !(urlVars['donativo']) ){
+ /* Se hace todo sobre el campo otra cuota */
+ /* if((urlVars['resultado'] != 'POSITIVO') || !(urlVars['cuota']) && !(urlVars['donativo']) ){
     $(".resultado .form-item:nth-child(2) input").attr("checked", true);
   }
   else {
     $(".resultado .form-item:nth-child(1) input").attr("checked", true);
-  }
+  }*/
 
   // pvkey
   if((urlVars['pvkey'])){
@@ -173,10 +174,10 @@ jQuery(function($) {
 
   // memkey
   if((urlVars['memkey'])){
-    $("[name='submitted[civicrm_1_contact_1_cg9_custom_38]']").val(urlVars['memkey']);
+    $("[name='submitted[civicrm_1_membership_1_membership_custom_149]']").val(urlVars['memkey']);
   }
   else {
-    $("[name='submitted[civicrm_1_contact_1_cg9_custom_38]']").val(0);
+    $("[name='submitted[civicrm_1_membership_1_membership_custom_149]']").val(0);
   }
 
   // cnkey
