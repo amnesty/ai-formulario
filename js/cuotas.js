@@ -45,6 +45,10 @@
       controlaOtraCuota();
   });
 
+  $("input.cuota_manual").change(function() {
+      $("input.otra_cuota").val(this.val());
+  });
+
   if ($("select.frecuencia").length) {
     frecuencia = $("select.frecuencia");
   } else {
