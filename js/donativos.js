@@ -20,6 +20,16 @@ jQuery(function($) {
     var contrib_source_input = $( "[name='submitted[civicrm_1_contribution_1_cg21_custom_104]']");
     var contrib_kw_input = $( "[name='submitted[civicrm_1_contribution_1_cg21_custom_103]']");
     var contrib_suborigen_input = $( "[name='submitted[civicrm_1_contribution_1_cg21_custom_109]']");
+    var contrib_amount = $( "[name='submitted[caja_colaborar][aportacion][donativo]']" );
+    var contrib_other_amount = $( "[name='submitted[caja_colaborar][aportacion][civicrm_1_contribution_1_contribution_total_amount]']" );
+
+    contrib_amount.change( function() {
+        var clicked_amount = $( this ).val();
+
+        if (clicked_amount == 0) {
+            contrib_other_amount.val("");
+        }
+    });
 
     // origen
     if( get_source != '' && get_source ){ // origen

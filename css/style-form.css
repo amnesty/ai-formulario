@@ -150,6 +150,7 @@ header, hgroup, nav, section {
     line-height: 50px;
     /*float:left;*/
     overflow: hidden;
+    display: inline;
 }
 
 .content-form .webform-conditional-processed .caja-checkbox div {
