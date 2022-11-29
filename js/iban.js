@@ -161,7 +161,7 @@ jQuery(function($) {
   // Esto da soporte a la carga del formulario con errores de
   // validación encontrados por el servidor
 
-  if(usaVariosCampos()) {
+  if(usaVariosCampos() && iban.val() != '') {
     rellenaCampos(iban.val());
   }
 
