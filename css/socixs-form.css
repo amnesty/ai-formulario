@@ -44,6 +44,10 @@
         font-style: normal;
     }
 
+    form[action="/haz-un-donativo-old"] .webform-component--caja-colaborar--aportacion {
+        padding: 1rem;
+    }
+
     .webform-conditional-processed .input-generic {
         width: 100%;
         max-width: 350px; /* H: ancho maximo de los campos */
