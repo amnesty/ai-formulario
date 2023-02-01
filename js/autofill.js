@@ -31,7 +31,7 @@ function decode_url(url){
 
 // URL Vars
 function getUrlVars() {
-    var url = decode_url(window.location.href);
+    var url = decode_url(decodeURIComponent(window.location.href));
     var vars = {};
     var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
         vars[key] = value;
