@@ -303,7 +303,7 @@ jQuery(function($) {
 
     // Show or hide/erase "other quantity" field depending on which checkbox is checked
     $(".cuota").click(function() {
-        $(".otra_cuota").val('');
+       // $(".otra_cuota").val('');
     });
 
     // Otra cantidad copiada en cantidad oculta

@@ -130,6 +130,8 @@ jQuery(function($) {
   $('.iban input, .iban select').change(function () {
     var actual = cuentaActual();
 
+
+
     if (usaVariosCampos()) {
       iban.val(actual);
     }

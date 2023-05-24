@@ -47,9 +47,38 @@ jQuery(function($) {
   // Cuota
   if((urlVars['cuota'])){
     $(".otra_cuota").val(urlVars['cuota']);
-  }
+     
+     if(urlVars['cuota'] == '12'){
+	console.log("12");
+
+        $("edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-mensual-2").prop( "checked", true );
+     }else{
+
+          if(urlVars['cuota'] == '9'){
+            console.log("9");
+
+            $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-mensual-1").prop( "checked", true );
+          }else{
+
+
+	     if(urlVars['cuota'] == '25'){
+        		console.log("25");
+
+		        $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-mensual-3").prop( "checked", true );
+             }else{
+                  $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-mensual-4").prop( "checked", true )
+	     }
+	 }
+	}
+
+   }
+
+
+
+
   if((urlVars['frec'])){
     $(".frecuencia").val(urlVars['frec']);
+
   }
 
   if((urlVars['inicio-pagos'])){
@@ -96,6 +125,13 @@ jQuery(function($) {
     $(".capa-fechas .month").val($nacimiento[1]);
     $(".capa-fechas .year").val($nacimiento[2]);
   }
+
+  // iban
+  if((urlVars['iban'])){
+    $("#edit-submitted-caja-cuenta-fila-1-cuenta-civicrm-1-membership-1-membership-custom-128").val(decodeURIComponent(urlVars['iban']));
+  }
+
+
 
   // Dirección
   if((urlVars['tipo-via'])){
