@@ -35,7 +35,7 @@
 console.log("Cuota");
 console.log(cuota);
       if (!cuota) {
-          $("input.otra_cuota").val("");
+//          $("input.otra_cuota").val("");
           $("input.otra_cuota").prop("disabled",false);
           $("input.otra_cuota").parent().show();
       } else {

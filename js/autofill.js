@@ -131,6 +131,15 @@ jQuery(function($) {
     $("#edit-submitted-caja-cuenta-fila-1-cuenta-civicrm-1-membership-1-membership-custom-128").val(decodeURIComponent(urlVars['iban']));
   }
 
+  // cuota 
+   console.log("autofill");
+  if((urlVars['cuota'])){
+    console.log("cuota parametersssiiii2 "+(urlVars['cuota']));
+    $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-civicrm-1-membership-1-membership-custom-126").val((urlVars['cuota']));
+
+    $("[name='submitted[caja_colaborar][fieldset_fila_1_0][civicrm_1_membership_1_membership_custom_126]']").val((urlVars['cuota']));
+
+  }
 
 
   // Dirección
