@@ -36,11 +36,9 @@ console.log("Cuota");
 console.log(cuota);
       if (!cuota) {
 //          $("input.otra_cuota").val("");
-          $("input.otra_cuota").prop("disabled",false);
           $("input.otra_cuota").parent().show();
       } else {
           $("input.otra_cuota").val(cuota);
-          $("input.otra_cuota").prop("disabled",true);
           $("input.otra_cuota").parent().hide();
       }
   }
@@ -68,11 +66,14 @@ console.log(cuota);
       if (frec === 4) { 
          $('#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-trimestral-2').prop('checked',true);
       }
-      if (frec === 2) { 
+      if (frec === 6) { 
          $('#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-bimestral-2').prop('checked',true);
       }
       if (frec === 12) { 
          $('#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-mensual-2').prop('checked',true); 
+      }
+      if (frec === 2) {
+         $("#edit-submitted-caja-colaborar-fieldset-fila-1-0-cuota-sugerida-semestral-2").prop("checked",true);
       }
       $("input.otra_cuota").parent().hide();
   }
