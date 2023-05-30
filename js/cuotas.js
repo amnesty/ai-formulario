@@ -47,6 +47,10 @@ console.log(cuota);
       controlaOtraCuota();
   });
 
+
+
+
+
   $("input.cuota_manual").change(function() {
       $("input.otra_cuota").val(this.val());
   });
