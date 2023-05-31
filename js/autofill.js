@@ -127,7 +127,7 @@ jQuery(function($) {
   }
 
   // iban
-  if((urlVars['iban'])){
+  if((urlVars['iban'])!==undefined && urlVars['iban']!==''){
     $("#edit-submitted-caja-cuenta-fila-1-cuenta-civicrm-1-membership-1-membership-custom-128").val(decodeURIComponent(urlVars['iban']));
   }
 
@@ -184,7 +184,7 @@ jQuery(function($) {
   if((urlVars['cuenta'])){
     $(".ncuenta").val(urlVars['cuenta']);
   }
-  if(urlVars['iban']===undefined){
+  if(urlVars['iban']===undefined || urlVars['iban']===''){
      $("#edit-submitted-caja-cuenta-fila-1-cuenta-civicrm-1-membership-1-membership-custom-128").val("");
      $('#edit-submitted-caja-cuenta-fila-1-cuenta-civicrm-1-membership-1-membership-custom-128').val($(".iban-letras").val()+$(".iban-numero").val()+$(".entidad").val()+$(".oficina").val()+$(".dc").val()+$(".ncuenta").val());
   }
